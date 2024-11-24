@@ -6,6 +6,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isProceduresOpen, setIsProceduresOpen] = useState(false);
 
     const navigate = useNavigate();
 
@@ -29,17 +30,18 @@ const Header = () => {
                 { name: "Constipation", path: "/services/constipation" },
                 { name: "Diarrhea Management", path: "/services/diarrhea" },
             ]
-        },
-        {
-            category: "Procedures",
-            items: [
-                { name: "Endoscopy", path: "/services/endoscopy" },
-                { name: "Colonoscopy", path: "/services/colonoscopy" },
-                { name: "Liver Biopsy", path: "/services/liver-biopsy" },
-                { name: "Fibroscan", path: "/services/fibroscan" },
-            ]
         }
     ];
+
+    const procedures = {
+        category: "Procedures",
+        items: [
+            { name: "Endoscopy", path: "/procedures/endoscopy" },
+            { name: "Colonoscopy", path: "/procedures/colonoscopy" },
+            { name: "Liver Biopsy", path: "/procedures/liver-biopsy" },
+            { name: "Fibroscan", path: "/procedures/fibroscan" },
+        ]
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -59,6 +61,15 @@ const Header = () => {
         }
     };
 
+    const handleProceduresClick = (e: React.MouseEvent) => {
+        if (window.innerWidth < 768) {
+            e.preventDefault();
+            setIsProceduresOpen(!isProceduresOpen);
+        } else {
+            navigate('/procedures');
+        }
+    };
+
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white'}`}>
             <nav className="sticky border-b border-blue-200 w-full">
@@ -66,8 +77,8 @@ const Header = () => {
                     <div className="flex justify-between items-center py-4">
                         <Link to="/" className="flex items-center space-x-3">
                             <img
-                                src="./logo.png"
-                                className="h-28 w-44 object-cover"
+                                src="logo.png"
+                                className="h-20 w-56 object-cover"
                                 alt="Dr. Arjun Maria"
                             />
                         </Link>
@@ -102,6 +113,34 @@ const Header = () => {
                                                 ))}
                                             </div>
                                         ))}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative group">
+                                <button
+                                    className="flex items-center text-blue-900 font-medium hover:text-blue-600 transition-colors"
+                                    onClick={handleProceduresClick}
+                                >
+                                    Procedures
+                                    <svg className="ml-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                    <div className="py-1" role="menu">
+                                        <div className="px-4 py-2">
+                                            <h3 className="text-sm font-semibold text-blue-900 mb-2">{procedures.category}</h3>
+                                            {procedures.items.map((procedure) => (
+                                                <Link
+                                                    key={procedure.path}
+                                                    to={procedure.path}
+                                                    className="block px-4 py-1 text-sm text-blue-600 hover:bg-blue-50 hover:text-blue-900"
+                                                    role="menuitem"
+                                                >
+                                                    {procedure.name}
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -158,6 +197,29 @@ const Header = () => {
                                             ))}
                                         </div>
                                     ))}
+                                </div>
+                            )}
+                            <button
+                                className="text-left px-6 py-4 text-blue-900 font-medium hover:bg-blue-50"
+                                onClick={() => setIsProceduresOpen(!isProceduresOpen)}
+                            >
+                                Procedures
+                            </button>
+                            {isProceduresOpen && (
+                                <div className="bg-blue-50 px-8 py-2">
+                                    <div className="mb-4">
+                                        <h3 className="text-sm font-semibold text-blue-900 mb-2">{procedures.category}</h3>
+                                        {procedures.items.map((procedure) => (
+                                            <Link
+                                                key={procedure.path}
+                                                to={procedure.path}
+                                                className="block py-1 text-sm text-blue-600 hover:text-blue-900"
+                                                onClick={() => setIsMenuOpen(false)}
+                                            >
+                                                {procedure.name}
+                                            </Link>
+                                        ))}
+                                    </div>
                                 </div>
                             )}
                             <MobileNavLink to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</MobileNavLink>

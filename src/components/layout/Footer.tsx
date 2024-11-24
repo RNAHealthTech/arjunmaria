@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Linkedin, Award, BookOpen, Stethoscope } from 'lucide-react';
 
 const siteMetadata = {
@@ -12,11 +12,11 @@ const siteMetadata = {
 
 
 
-const FooterLink: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => (
-  <Link to={to} className="hover:text-[#FBE8DC] transition-colors duration-300 text-white">
-    {children}
-  </Link>
-);
+// const FooterLink: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => (
+//   <Link to={to} className="hover:text-[#FBE8DC] transition-colors duration-300 text-white">
+//     {children}
+//   </Link>
+// );
 
 const Footer = () => {
   return (

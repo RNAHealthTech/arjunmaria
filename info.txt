@@ -14,7 +14,7 @@ phone :  +011-42254000
 linkedIn : https://www.linkedin.com/in/arjun-maria-67a271135/
 
 
-Publications
+# Publications
 Rotational thromboelastometry-guided blood component use in cirrhotic children undergoing invasive procedures: Randomized controlled trial- https://onlinelibrary.wiley.com/doi/abs/10.1111/liv.15398
 
 Association of HLA DRB1 Allele Profile with Pediatric Autoimmune Liver Disease in India- https://www.sciencedirect.com/science/article/pii/S0973688323000014
@@ -27,17 +27,38 @@ Endoscopic Cystogastrostomy in Children with Symptomatic Pancreatic Pseudocyst- 
 
 Laterotrusion (Side to Side) and Protrusion/Retraction Difficulty of Tongue in Two Children with Wilson's Disease- https://www.thieme-connect.com/products/ejournals/html/10.1055/s-0041-1740365
 
-Coeditor. Manual of Neonatal protocols, 3rd edition,2017. Published by Neonatal Division, Department of Paediatrics, Hindu Rao Hospital and NDMC Medical College, New Delhi.
+# Coeditor. Manual of Neonatal protocols, 3rd edition,2017. Published by Neonatal Division, Department of Paediatrics, Hindu Rao Hospital and NDMC Medical College, New Delhi.
 
-Less read
+
 Conditions Treated
-Neonatal Cholestasis Syndrome- Jaundice in infants, Hepatitis-Jaundice in older children, Metabolic liver disease, Acute liver failure, Chronic liver disease, Hematemesis- Blood in vomiting, Pain abdomen, Constipation, Diarrhoea- loose stools, Blood in stools, Pancreatitis, Liver transplant
+
+Neonatal Cholestasis Syndrome- Jaundice in infants, 
+Hepatitis-Jaundice in older children, Metabolic liver disease, 
+Acute liver failure, 
+Chronic liver disease, 
+Hematemesis- Blood in vomiting, 
+Pain abdomen, 
+Constipation, 
+Diarrhoea- loose stools, 
+Blood in stools, 
+Pancreatitis, 
+Liver transplant
+
+
+# Procedures Performed
+Endoscopy and Variceal Endotherapy, 
+Gastrointestinal Foreign Body removal, 
+Colonoscopy, 
+Anorectal Manometry, 
+Transjugular Liver Biopsy, 
+Percutaneous Liver Biopsy, 
+HVPG ( Hepatic Venous Pressure Gradient) , 
+Transient Elastography (Fibroscan)
+
+
 
 Languages Spoken
 Hindi, English
-
-Procedures Performed
-Endoscopy and Variceal Endotherapy, Gastrointestinal Foreign Body removal, Colonoscopy, Anorectal Manometry, Transjugular Liver Biopsy, Percutaneous Liver Biopsy, HVPG ( Hepatic Venous Pressure Gradient) , Transient Elastography (Fibroscan)
 
 Awards and Honors
 2024
