@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { motion } from 'framer-motion';
 import { Award, Clock, MapPin, Phone, Mail, BookOpen, Stethoscope, ChevronRight, Calendar, GraduationCap, Heart, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import AppointmentModal from '../components/utilities/AppointmentModal';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
+
+
     const navigate = useNavigate();
 
     const containerVariants = {
@@ -64,7 +72,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row gap-4 mt-8">
-                        <Button size="xl" variant="default" className="bg-white hover:bg-white/20 text-blue-900 backdrop-blur-sm">
+                        <Button onClick={openModal} size="xl" variant="default" className="bg-white hover:bg-white/20 text-blue-900 backdrop-blur-sm">
                             Book Priority Consultation
                         </Button>
                         <Button size="xl" variant="default" className="bg-blue-600/80 hover:bg-blue-600 text-white">
@@ -248,42 +256,43 @@ const HomePage = () => {
 
             {/* CTA Section */}
             <section className="py-24 relative">
-    {/* Background image */}
-    <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-            backgroundImage: `url('/images/1.jpg')`,  // Replace with your actual image URL
-        }}
-    />
-    
-    {/* Gradient overlay */}
-    <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-50/90 to-white/90" />
-    
-    {/* Content */}
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto space-y-6"
-        >
-            <h2 className="text-3xl font-bold text-gray-900">
-                Begin Your Child's Healthcare Journey
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-                Connect with Dr. Arjun Maria for specialized pediatric care. We offer comprehensive treatment with a focus on your child's comfort and well-being.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" className="text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                    Schedule Consultation
-                </Button>
-                <Button size="lg" variant="outline">
-                    Learn More About Our Services
-                </Button>
-            </div>
-        </motion.div>
-    </div>
-</section>
+                {/* Background image */}
+                <div
+                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+                    style={{
+                        backgroundImage: `url('/images/1.jpg')`,
+                    }}
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-50/90 to-white/90" />
+
+                {/* Content */}
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="max-w-2xl mx-auto space-y-6"
+                    >
+                        <h2 className="text-3xl font-bold text-gray-900">
+                            Begin Your Child's Healthcare Journey
+                        </h2>
+                        <p className="text-gray-600 leading-relaxed">
+                            Connect with Dr. Arjun Maria for specialized pediatric care. We offer comprehensive treatment with a focus on your child's comfort and well-being.
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <Button onClick={openModal} size="lg" className="text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+                                Schedule Consultation
+                            </Button>
+                            <Button size="lg" onClick={() => navigate("/services")} variant="outline">
+                                Learn More About Our Services
+                            </Button>
+                        </div>
+                    </motion.div>
+                    <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
+                </div>
+            </section>
 
             {/* Map Section */}
             <motion.section
