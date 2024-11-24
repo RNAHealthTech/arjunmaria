@@ -6,7 +6,7 @@ const ContactPage: React.FC = () => {
   const [state, handleSubmit] = useForm("mqakdlln");
 
   return (
-    <main className="min-h-screen mt-[120px]">
+    <main className="min-h-screen mt-[110px]">
       {/* Hero Section */}
       <div className="relative w-full h-[400px] overflow-hidden">
         

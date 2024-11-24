@@ -26,7 +26,7 @@ const ProcedureTemplatePage: React.FC = () => {
     }
 
     return (
-        <main className="min-h-screen mt-[130px]">
+        <main className="min-h-screen mt-[110px]">
             {/* Hero Section with Image */}
             <div className="relative w-full h-[400px] overflow-hidden">
                 {/* Background Image */}

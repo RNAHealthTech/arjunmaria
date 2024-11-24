@@ -3,8 +3,11 @@ import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { motion } from 'framer-motion';
 import { Award, Clock, MapPin, Phone, Mail, BookOpen, Stethoscope, ChevronRight, Calendar, GraduationCap, Heart, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+    const navigate = useNavigate();
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -27,15 +30,15 @@ const HomePage = () => {
 
     return (
         <main className="overflow-hidden">
-             <svg className="fixed -z-50" width="0" height="0">
+            <svg className="fixed -z-50" width="0" height="0">
                 <defs>
                     <pattern id="grid-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
-                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.1"/>
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.1" />
                     </pattern>
                 </defs>
             </svg>
-           
-            <section className="relative h-screen text-center mt-12">
+
+            <section className="relative h-screen text-center mt-28">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
@@ -46,7 +49,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative z-10 h-full flex flex-col justify-center items-center lg:items-start max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col gap-3">
-                        <span className="text-orange-200 text-lg md:text-xl uppercase tracking-wider">Leading Pediatric Gastroenterology Care</span>
+                        <span className="hidden md:block text-orange-200 text-lg md:text-xl uppercase tracking-wider">Leading Pediatric Gastroenterology Care</span>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 max-w-3xl leading-tight">
                             Your Child's Health Journey
                             <span className="block">Begins With Expert Care</span>
@@ -73,7 +76,6 @@ const HomePage = () => {
 
             {/* Doctor Profile Section */}
             <section className="py-24 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url(#grid-pattern)] opacity-5"></div>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <motion.div
@@ -121,11 +123,11 @@ const HomePage = () => {
                             </div>
 
                             <div className="flex gap-4">
-                                <Button variant="outline" className="group">
+                                <Button variant="outline" onClick={() => navigate("/about")} className="group">
                                     View Full Profile
                                     <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                 </Button>
-                                <Button variant="ghost">Read Publications</Button>
+                                <Button onClick={() => navigate("/about#publications")} variant="ghost">Read Publications</Button>
                             </div>
                         </motion.div>
                     </div>
@@ -134,7 +136,6 @@ const HomePage = () => {
 
             {/* Services Grid with Green Accents */}
             <section className="py-24 bg-gradient-to-br from-green-50 to-white relative">
-                <div className="absolute inset-0 bg-[url(#grid-pattern)] opacity-5"></div>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -154,19 +155,22 @@ const HomePage = () => {
                                 title: "Liver Care & Transplant",
                                 description: "Expert management of pediatric liver conditions and comprehensive transplant care services",
                                 icon: <Stethoscope className="w-8 h-8" />,
-                                color: "from-green-400 to-green-500"
+                                color: "from-green-400 to-green-500",
+                                link: '/services'
                             },
                             {
                                 title: "Advanced Procedures",
                                 description: "State-of-the-art diagnostic and therapeutic procedures with cutting-edge technology",
                                 icon: <Heart className="w-8 h-8" />,
-                                color: "from-green-500 to-green-600"
+                                color: "from-green-500 to-green-600",
+                                link: '/procedures'
                             },
                             {
                                 title: "Digestive Health",
                                 description: "Specialized care for complex gastrointestinal conditions and digestive disorders",
                                 icon: <BookOpen className="w-8 h-8" />,
-                                color: "from-green-400 to-green-500"
+                                color: "from-green-400 to-green-500",
+                                link: '/services'
                             }
                         ].map((service, index) => (
                             <motion.div
@@ -198,7 +202,7 @@ const HomePage = () => {
 
             {/* Contact Information with Blue Gradient */}
             <section className="py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 relative">
-                <div className="absolute inset-0 bg-[url(#grid-pattern)] opacity-10"></div>
+
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
@@ -243,32 +247,43 @@ const HomePage = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-gradient-to-br from-blue-50 to-white relative">
-                <div className="absolute inset-0 bg-[url(#grid-pattern)] opacity-5"></div>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="max-w-2xl mx-auto space-y-6"
-                    >
-                        <h2 className="text-3xl font-bold text-gray-900">
-                            Begin Your Child's Healthcare Journey
-                        </h2>
-                        <p className="text-gray-600 leading-relaxed">
-                            Connect with Dr. Arjun Maria for specialized pediatric care. We offer comprehensive treatment with a focus on your child's comfort and well-being.
-                        </p>
-                        <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                                Schedule Consultation
-                            </Button>
-                            <Button size="lg" variant="outline">
-                                Learn More About Our Services
-                            </Button>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+            <section className="py-24 relative">
+    {/* Background image */}
+    <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+            backgroundImage: `url('/images/1.jpg')`,  // Replace with your actual image URL
+        }}
+    />
+    
+    {/* Gradient overlay */}
+    <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-50/90 to-white/90" />
+    
+    {/* Content */}
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto space-y-6"
+        >
+            <h2 className="text-3xl font-bold text-gray-900">
+                Begin Your Child's Healthcare Journey
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+                Connect with Dr. Arjun Maria for specialized pediatric care. We offer comprehensive treatment with a focus on your child's comfort and well-being.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button size="lg" className="text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+                    Schedule Consultation
+                </Button>
+                <Button size="lg" variant="outline">
+                    Learn More About Our Services
+                </Button>
+            </div>
+        </motion.div>
+    </div>
+</section>
 
             {/* Map Section */}
             <motion.section

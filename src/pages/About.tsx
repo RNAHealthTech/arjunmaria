@@ -92,7 +92,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <main className="min-h-screen mt-[130px]">
+    <main className="min-h-screen mt-[110px]">
       {/* Hero Section with Modern Gradient */}
       <div className="relative w-full h-[500px] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/80 to-red-900/70"></div>

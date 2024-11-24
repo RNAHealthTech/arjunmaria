@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
@@ -10,9 +10,20 @@ import ProcedureTemplatePage from './pages/ProcedureTemplatePage';
 import ServiceTemplatePage from './pages/ServiceTemplatePage';
 
 
+const useScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+};
+
 
 
 const App: React.FC = () => {
+  
+  useScrollToTop();
+  
   return (
     <Layout>
       <Routes>
