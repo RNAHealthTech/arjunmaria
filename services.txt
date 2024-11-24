@@ -1,0 +1,38 @@
+# Services 
+
+1. Pediatric Liver Care Services
+
+Neonatal Cholestasis Syndrome (Jaundice in infants)
+Hepatitis (Jaundice in older children)
+Metabolic liver disease
+Acute liver failure
+Chronic liver disease
+Liver transplant management
+Autoimmune Liver disease
+
+
+2. Gastrointestinal Services
+
+Hematemesis (Blood in vomiting)
+Abdominal pain management
+Constipation treatment
+Diarrhea management
+Blood in stools treatment
+Foreign body removal
+
+3. Pancreatic Care
+
+Pancreatitis treatment
+Pancreatic disorders management
+
+
+4. Diagnostic Procedures
+
+Endoscopy services
+Variceal Endotherapy
+Colonoscopy
+Anorectal Manometry
+Transjugular Liver Biopsy
+Percutaneous Liver Biopsy
+HVPG (Hepatic Venous Pressure Gradient)
+Transient Elastography (Fibroscan)
