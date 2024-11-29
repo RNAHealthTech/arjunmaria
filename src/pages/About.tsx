@@ -100,7 +100,7 @@ const AboutPage: React.FC = () => {
         <div className="container mx-auto px-4 h-full flex items-center relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
-              <img src="/images/doc.png" alt="Dr. Arjun Maria" className="w-full h-full object-cover" />
+              <img src="/images/doc.JPG" alt="Dr. Arjun Maria" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Dr. Arjun Maria</h1>

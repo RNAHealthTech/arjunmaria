@@ -2,15 +2,20 @@ import React, { useState } from 'react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { motion } from 'framer-motion';
-import { Award, Clock, MapPin, Phone, Mail, BookOpen, Stethoscope, ChevronRight, Calendar, GraduationCap, Heart, ArrowRight } from 'lucide-react';
+import { Award, Clock, MapPin,Mail, BookOpen, Stethoscope, ChevronRight,GraduationCap, Heart} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import AppointmentModal from '../components/utilities/AppointmentModal';
+import OnlineAppointmentModal from '../components/utilities/OnlineAppointmentModal';
 
 const HomePage: React.FC = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
+
+    const [isModalOpen2, setIsModalOpen2] = useState(false);
+    const openModal2 = () => setIsModalOpen2(true);
+    const closeModal2 = () => setIsModalOpen2(false);
 
 
 
@@ -75,7 +80,7 @@ const HomePage: React.FC = () => {
                         <Button onClick={openModal} size="xl" variant="default" className="bg-white hover:bg-white/20 text-blue-900 backdrop-blur-sm">
                             Book Priority Consultation
                         </Button>
-                        <Button size="xl" variant="default" className="bg-blue-600/80 hover:bg-blue-600 text-white">
+                        <Button size="xl" onClick={openModal2} variant="default" className="bg-blue-600/80 hover:bg-blue-600 text-white">
                             Virtual Consultation
                         </Button>
                     </div>
@@ -95,9 +100,9 @@ const HomePage: React.FC = () => {
                             <div className="relative">
                                 <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-blue-200 blur-3xl opacity-30 -z-10"></div>
                                 <img
-                                    src="/images/doc.png"
+                                    src="/images/doctor.JPG"
                                     alt="Dr. Arjun Maria"
-                                    className="relative z-10 w-72 h-72 object-cover rounded-2xl shadow-2xl"
+                                    className="relative z-10 w-96 h-96 object-cover rounded-2xl shadow-2xl"
                                 />
                             </div>
                         </motion.div>
@@ -141,8 +146,6 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Services Grid with Green Accents */}
             <section className="py-24 bg-gradient-to-br from-green-50 to-white relative">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
@@ -204,6 +207,17 @@ const HomePage: React.FC = () => {
                                 </Card>
                             </motion.div>
                         ))}
+                    </div>
+
+                    {/* Centered Button */}
+                    <div className="flex justify-center mt-8">
+                        <Button
+                            size="xl"
+                            variant="default"
+                            className="bg-green-600/80 text-center hover:bg-green-600 text-white"
+                        >
+                            Learn about Services
+                        </Button>
                     </div>
                 </div>
             </section>
@@ -291,6 +305,7 @@ const HomePage: React.FC = () => {
                         </div>
                     </motion.div>
                     <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
+                    <OnlineAppointmentModal isOpen2={isModalOpen2} onClose2={closeModal2} />
                 </div>
             </section>
 
@@ -308,6 +323,7 @@ const HomePage: React.FC = () => {
                     >
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.709809128418!2d77.18698097632311!3d28.63845817566164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02a17db06405%3A0x6f1a6c9d6ede10d0!2sSir%20Ganga%20Ram%20Hospital!5e0!3m2!1sen!2sin!4v1732308053348!5m2!1sen!2sin"
+                            title='Sir Ganga Ram Hospital'
                             className="w-full h-[450px]"
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
