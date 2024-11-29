@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +34,6 @@ const Header = () => {
     ];
 
     const procedures = {
-        category: "Procedures",
         items: [
             { name: "Endoscopy", path: "/procedures/endoscopy" },
             { name: "Colonoscopy", path: "/procedures/colonoscopy" },
@@ -71,7 +70,7 @@ const Header = () => {
     };
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white'}`}>
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
             <nav className="sticky border-b border-blue-200 w-full">
                 <div className="container mx-auto px-4">
                     <div className="flex justify-between items-center py-4">
@@ -129,12 +128,12 @@ const Header = () => {
                                 <div className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                                     <div className="py-1" role="menu">
                                         <div className="px-4 py-2">
-                                            <h3 className="text-sm font-semibold text-blue-900 mb-2">{procedures.category}</h3>
+
                                             {procedures.items.map((procedure) => (
                                                 <Link
                                                     key={procedure.path}
                                                     to={procedure.path}
-                                                    className="block px-4 py-1 text-sm text-blue-600 hover:bg-blue-50 hover:text-blue-900"
+                                                    className="block px-4 py-1 text-md text-blue-600 hover:bg-blue-50 hover:text-blue-900"
                                                     role="menuitem"
                                                 >
                                                     {procedure.name}
@@ -174,22 +173,26 @@ const Header = () => {
                         <nav className="flex flex-col w-full">
                             <MobileNavLink to="/" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
                             <MobileNavLink to="/about" onClick={() => setIsMenuOpen(false)}>About</MobileNavLink>
+
                             <button
-                                className="text-left px-6 py-4 text-blue-900 font-medium hover:bg-blue-50"
+                                className="flex justify-between items-center w-full px-6 py-4 text-blue-900 font-medium hover:bg-blue-50"
                                 onClick={() => setIsServicesOpen(!isServicesOpen)}
                             >
-                                Services
+                                <span>Services</span>
+                                <ChevronDown
+                                    className={`transform transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`}
+                                    size={20}
+                                />
                             </button>
                             {isServicesOpen && (
                                 <div className="bg-blue-50 px-8 py-2">
                                     {services.map((category) => (
                                         <div key={category.category} className="mb-4">
-                                            <h3 className="text-sm font-semibold text-blue-900 mb-2">{category.category}</h3>
                                             {category.items.map((service) => (
                                                 <Link
                                                     key={service.path}
                                                     to={service.path}
-                                                    className="block py-1 text-sm text-blue-600 hover:text-blue-900"
+                                                    className="block py-1 text-md text-blue-600 hover:text-blue-900"
                                                     onClick={() => setIsMenuOpen(false)}
                                                 >
                                                     {service.name}
@@ -199,21 +202,26 @@ const Header = () => {
                                     ))}
                                 </div>
                             )}
+
+
                             <button
-                                className="text-left px-6 py-4 text-blue-900 font-medium hover:bg-blue-50"
+                                className="flex justify-between items-center w-full px-6 py-4 text-blue-900 font-medium hover:bg-blue-50"
                                 onClick={() => setIsProceduresOpen(!isProceduresOpen)}
                             >
-                                Procedures
+                                <span>Procedures</span>
+                                <ChevronDown
+                                    className={`transform transition-transform duration-300 ${isProceduresOpen ? 'rotate-180' : ''}`}
+                                    size={20}
+                                />
                             </button>
                             {isProceduresOpen && (
                                 <div className="bg-blue-50 px-8 py-2">
                                     <div className="mb-4">
-                                        <h3 className="text-sm font-semibold text-blue-900 mb-2">{procedures.category}</h3>
                                         {procedures.items.map((procedure) => (
                                             <Link
                                                 key={procedure.path}
                                                 to={procedure.path}
-                                                className="block py-1 text-sm text-blue-600 hover:text-blue-900"
+                                                className="block py-1 text-md text-blue-600 hover:text-blue-900"
                                                 onClick={() => setIsMenuOpen(false)}
                                             >
                                                 {procedure.name}

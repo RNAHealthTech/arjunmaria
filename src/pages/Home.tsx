@@ -199,7 +199,7 @@ const HomePage: React.FC = () => {
                                         </div>
                                         <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
                                         <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                                        <Button variant="ghost" className="group">
+                                        <Button onClick={()=>navigate(service.link)} variant="ghost" className="group">
                                             Learn More
                                             <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                         </Button>
@@ -215,6 +215,7 @@ const HomePage: React.FC = () => {
                             size="xl"
                             variant="default"
                             className="bg-green-600/80 text-center hover:bg-green-600 text-white"
+                            onClick={()=>navigate("/services")}
                         >
                             Learn about Services
                         </Button>
@@ -299,8 +300,8 @@ const HomePage: React.FC = () => {
                             <Button onClick={openModal} size="lg" className="text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
                                 Schedule Consultation
                             </Button>
-                            <Button size="lg" onClick={() => navigate("/services")} variant="outline">
-                                Learn More About Our Services
+                            <Button size="lg" onClick={() => navigate("/contact")} variant="outline">
+                                 Contact Us 
                             </Button>
                         </div>
                     </motion.div>

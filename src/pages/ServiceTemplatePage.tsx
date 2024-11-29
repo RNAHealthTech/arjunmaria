@@ -1,8 +1,9 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import services from '../components/data/services';
+import AppointmentModal from '../components/utilities/AppointmentModal';
 
 // Icons (using lucide-react)
 import { AlertCircle, Activity, Heart, Stethoscope } from 'lucide-react';
@@ -35,6 +36,11 @@ const InfoSection: React.FC<InfoSectionProps> = ({ title, items, icon, bgColor }
 
 const ServiceTemplatePage: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
+    const navigate = useNavigate();
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     // Find the service data based on the slug
     const service = services
@@ -119,16 +125,18 @@ const ServiceTemplatePage: React.FC = () => {
                                 Early intervention is key to better outcomes.
                             </p>
                             <div className="space-x-4">
-                                <Button variant="outline" className="bg-white hover:bg-blue-50">
+                                <Button variant="outline" onClick={openModal} className="bg-white hover:bg-blue-50">
                                     Book Appointment
                                 </Button>
-                                <Button variant="outline" className="bg-transparent hover:bg-blue-800">
+                                <Button variant="outline" onClick={() => navigate('/contact')} className="border-white bg-transparent  text-white hover:bg-blue-800">
                                     Contact Us
                                 </Button>
                             </div>
                         </CardContent>
                     </Card>
                 </div>
+                <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
+
             </div>
         </main>
     );

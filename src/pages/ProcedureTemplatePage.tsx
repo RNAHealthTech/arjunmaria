@@ -4,12 +4,17 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import proceduresData, { ProcedureData } from '../components/data/procedures';
 import { useParams, useNavigate } from 'react-router-dom';
+import AppointmentModal from '../components/utilities/AppointmentModal';
 
 
 const ProcedureTemplatePage: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
     const navigate = useNavigate();
     const [procedure, setProcedure] = useState<ProcedureData | null>(null);
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -151,16 +156,17 @@ const ProcedureTemplatePage: React.FC = () => {
                             Our team is here to help you through every step of the process. Schedule a consultation with Dr. Arjun Maria to discuss your specific needs and concerns.
                         </p>
                         <div className="flex flex-col md:flex-row justify-center md:space-x-4 space-y-4 md:space-y-0">
-                            <Button className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 md:py-6 rounded-full flex items-center justify-center space-x-2">
+                            <Button onClick={openModal} className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 md:py-6 rounded-full flex items-center justify-center space-x-2">
                                 <Calendar className="w-5 h-5" />
                                 <span>Book Appointment</span>
                             </Button>
-                            <Button variant="outline" className="border-blue-900 text-blue-900 hover:bg-blue-50 px-8 py-4 md:py-6 rounded-full">
+                            <Button variant="outline" onClick={()=>navigate('/contact')} className="border-blue-900 text-blue-900 hover:bg-blue-50 px-8 py-4 md:py-2 rounded-full">
                                 Contact Us
                             </Button>
                         </div>
                     </div>
                 </div>
+                <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
             </div>
         </main>
     );
