@@ -124,7 +124,7 @@ const ServiceTemplatePage: React.FC = () => {
                                 Don't hesitate to reach out if you notice any of these symptoms.
                                 Early intervention is key to better outcomes.
                             </p>
-                            <div className="space-x-4">
+                            <div className="space-x-4 space-y-4">
                                 <Button variant="outline" onClick={openModal} className="bg-white hover:bg-blue-50">
                                     Book Appointment
                                 </Button>

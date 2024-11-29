@@ -11,9 +11,9 @@ interface AppointmentModalProps {
 const OnlineAppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen2, onClose2 }) => {
   const [state, handleSubmit] = useForm('xovagdyp');
   const [formData, setFormData] = useState({
-    type: 'Online',
+    Appointment_Type: 'Online',
     child_name: '',
-    child_age: '', 
+    child_age: '',
     parent_name: '',
     phone: '',
     email: '',
@@ -26,9 +26,9 @@ const OnlineAppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen2, onCl
       const timer = setTimeout(() => {
         onClose2();
         setFormData({
-          type: 'Online',
+          Appointment_Type: 'Online',
           child_name: '',
-          child_age: '', 
+          child_age: '',
           parent_name: '',
           phone: '',
           email: '',
@@ -109,7 +109,7 @@ const OnlineAppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen2, onCl
                   <label htmlFor="date" className="block text-sm font-medium text-blue-700">Preferred Date</label>
                   <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} required className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
                 </div>
-                 
+
                 <div>
                   <label htmlFor="text" className="block text-sm font-medium text-blue-700">Message</label>
                   <textarea id="text" name="text" rows={4} value={formData.text} onChange={handleChange} className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent"></textarea>
