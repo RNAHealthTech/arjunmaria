@@ -242,7 +242,7 @@ const HomePage: React.FC = () => {
                             {
                                 icon: <Mail />,
                                 title: "Contact",
-                                details: ["+011-42254000", "arjunmaria@hotmail.com"]
+                                details: ["+011-42254000", "+91-8076253821", "arjunmaria@hotmail.com"]
                             }
                         ].map((item, index) => (
                             <motion.div
