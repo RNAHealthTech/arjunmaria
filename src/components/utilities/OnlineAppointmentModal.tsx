@@ -11,6 +11,7 @@ interface AppointmentModalProps {
 const OnlineAppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen2, onClose2 }) => {
   const [state, handleSubmit] = useForm('xovagdyp');
   const [formData, setFormData] = useState({
+    type: 'Online',
     child_name: '',
     child_age: '', 
     parent_name: '',
@@ -25,6 +26,7 @@ const OnlineAppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen2, onCl
       const timer = setTimeout(() => {
         onClose2();
         setFormData({
+          type: 'Online',
           child_name: '',
           child_age: '', 
           parent_name: '',
