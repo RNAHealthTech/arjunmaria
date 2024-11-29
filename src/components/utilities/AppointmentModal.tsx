@@ -12,12 +12,11 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
   const [state, handleSubmit] = useForm('xovagdyp');
   const [formData, setFormData] = useState({
     child_name: '',
-    child_age: '', 
+    child_age: '',
     parent_name: '',
     phone: '',
     email: '',
     date: '',
-    
     text: '',
   });
 
@@ -27,12 +26,12 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
         onClose();
         setFormData({
           child_name: '',
-          child_age: '', 
+          child_age: '',
           parent_name: '',
           phone: '',
           email: '',
           date: '',
-        
+
           text: '',
         });
       }, 3000);
@@ -54,7 +53,25 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
   const handleFinalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     handleSubmit(formData);
+    sendWhatsAppMessage();
   };
+
+  const sendWhatsAppMessage = () => {
+    const message = `New Appointment Request:
+    
+    Child's Name: ${formData.child_name}
+    Child's Age: ${formData.child_age}
+    Parent Name: ${formData.parent_name}
+    Phone: ${formData.phone}
+    Email: ${formData.email}
+    Date: ${formData.date}
+    Message: ${formData.text}`;
+
+    const whatsappNumber = '918076253821';
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  }
 
   return ReactDOM.createPortal(
     <AnimatePresence>
@@ -109,7 +126,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
                   <label htmlFor="date" className="block text-sm font-medium text-blue-700">Preferred Date</label>
                   <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} required className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
                 </div>
-                 
+
                 <div>
                   <label htmlFor="text" className="block text-sm font-medium text-blue-700">Message</label>
                   <textarea id="text" name="text" rows={4} value={formData.text} onChange={handleChange} className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent"></textarea>

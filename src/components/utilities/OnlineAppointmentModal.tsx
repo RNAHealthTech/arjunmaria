@@ -54,7 +54,25 @@ const OnlineAppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen2, onCl
   const handleFinalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     handleSubmit(formData);
+    sendWhatsAppMessage();
   };
+
+  const sendWhatsAppMessage = () => {
+    const message = `New Appointment Request:
+    Appointment_Type: 'Online',
+    Child's Name: ${formData.child_name}
+    Child's Age: ${formData.child_age}
+    Parent Name: ${formData.parent_name}
+    Phone: ${formData.phone}
+    Email: ${formData.email}
+    Date: ${formData.date}
+    Message: ${formData.text}`;
+
+    const whatsappNumber = '918076253821'; 
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  }
 
   return ReactDOM.createPortal(
     <AnimatePresence>
