@@ -22,11 +22,11 @@ export const services: ServiceCategory[] = [
         category: "Pediatric Liver Care",
         items: [
             {
-                name: "Neonatal Cholestasis",
-                slug: "neonatal-cholestasis",
-                path: "/services/neonatal-cholestasis",
+                name: "Jaundice in Babies/Children",
+                slug: "jaundice-in-babies",
+                path: "/services/jaundice-in-babies",
                 image: "/images/services/neonatal-cholestasis.jpg",
-                description: "Neonatal cholestasis is a condition where bile flow from the liver is reduced or blocked in newborns, leading to jaundice and other complications.",
+                description: "Jaundice is a condition where bile flow from the liver is reduced or blocked in newborns, leading to jaundice and other complications.",
                 symptoms: [
                     "Yellowing of skin and eyes (jaundice) that persists beyond 2 weeks of age",
                     "Dark urine",

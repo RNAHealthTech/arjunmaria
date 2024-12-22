@@ -14,7 +14,7 @@ const Header = () => {
         {
             category: "Pediatric Liver Care",
             items: [
-                { name: "Neonatal Cholestasis", path: "/services/neonatal-cholestasis" },
+                { name: "Jaundice in Children", path: "/services/jaundice-in-babies" },
                 { name: "Hepatitis", path: "/services/hepatitis" },
                 { name: "Metabolic Liver Disease", path: "/services/metabolic-liver" },
                 { name: "Acute Liver Failure", path: "/services/acute-liver" },
@@ -36,6 +36,7 @@ const Header = () => {
     const procedures = {
         items: [
             { name: "Endoscopy", path: "/procedures/endoscopy" },
+            { name: "Percutaneous Endoscopic Gastrostomy (PEG)", path: "/procedures/peg" },
             { name: "Colonoscopy", path: "/procedures/colonoscopy" },
             { name: "Liver Biopsy", path: "/procedures/liver-biopsy" },
             { name: "Fibroscan", path: "/procedures/fibroscan" },
@@ -147,7 +148,7 @@ const Header = () => {
                             <div className="flex items-center space-x-2 border-l pl-8 ml-4 border-blue-200">
                                 <Phone className="text-blue-900" size={20} />
                                 <span className="text-blue-900 font-medium cursor-pointer" onClick={() => window.location.href = 'tel:+01142254000'}>
-                                    +011-42254000
+                                    +91-8076253821
                                 </span>
                             </div>
                         </div>

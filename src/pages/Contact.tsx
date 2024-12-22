@@ -32,7 +32,7 @@ const ContactPage: React.FC = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
             <Phone className="w-6 h-6 text-blue-500 mb-4" />
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Contact</h3>
-            <p className="text-gray-600">+011-42254000</p>
+            
             <p className="text-gray-600">+91-8076253821</p>
           </div>
           
@@ -45,7 +45,15 @@ const ContactPage: React.FC = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
             <Clock className="w-6 h-6 text-blue-500 mb-4" />
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Consultation Hours</h3>
-            <p className="text-gray-600">Mon - Sat: 9:00 am - 10:00 am</p>
+            <p className="text-gray-600">Mon - Sat: 9:00 am - 4:00 pm
+              <span className='text-gray-400'> @ Room No. 1192, Sir Ganga Ram Hospital</span>
+            </p>
+            <p className='text-gray-600'>Mon, Wed, Friday: 4pm - 8pm 
+              <span className='text-gray-400'> @ Sir Ganga Ram Hospital</span>              
+            </p>
+            <p className='text-gray-600'>Tuesday, Thursday, Saturday : 6pm - 8pm 
+              <span className='text-gray-400'> @ Child Welfare Clinic</span>
+            </p>
           </div>
         </div>
 

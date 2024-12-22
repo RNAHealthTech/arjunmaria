@@ -237,12 +237,12 @@ const HomePage: React.FC = () => {
                             {
                                 icon: <MapPin />,
                                 title: "Location",
-                                details: ["Room: F-86", "Sir Ganga Ram Hospital", "New Delhi"]
+                                details: ["Room: 1192", "Sir Ganga Ram Hospital", "New Delhi"]
                             },
                             {
                                 icon: <Mail />,
                                 title: "Contact",
-                                details: ["+011-42254000", "+91-8076253821", "arjunmaria@hotmail.com"]
+                                details: ["+91-8076253821", "arjunmaria@hotmail.com"]
                             }
                         ].map((item, index) => (
                             <motion.div

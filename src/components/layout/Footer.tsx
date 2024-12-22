@@ -5,9 +5,10 @@ import { MapPin, Phone, Mail, Clock, Linkedin, Award, BookOpen, Stethoscope } fr
 const siteMetadata = {
   linkedin: "https://www.linkedin.com/in/arjun-maria-67a271135/",
   email: "arjunmaria@hotmail.com",
-  phone: "+011-42254000",
-  address: "Room F-86",
-  consultingHours: "Mon - Sat 9:00 am - 10:00 am"
+  phone: "+91-8076253821",
+  address: "1192",
+  address2: "Sector 37 Noida, opposite 2nd Market",
+  consultingHours1: "Mon - Sat 9:00 am - 4:00 pm",
 };
 
 
@@ -38,7 +39,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Stethoscope className="w-4 h-4" />
-                <span>Neonatal Cholestasis Syndrome</span>
+                <span>Jaundice in Children/Babies</span>
               </li>
               <li className="flex items-center gap-2">
                 <Stethoscope className="w-4 h-4" />
@@ -50,7 +51,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Stethoscope className="w-4 h-4" />
-                <span>Liver Transplant Management</span>
+                <span>Liver Biopsy</span>
               </li>
             </ul>
           </div>
@@ -63,7 +64,8 @@ const Footer = () => {
                 <Clock className="w-5 h-5" />
                 <div>
                   <p className="text-sm font-medium">Consulting Hours</p>
-                  <p className="text-sm">{siteMetadata.consultingHours}</p>
+                  <p className="text-sm">{siteMetadata.consultingHours1}</p>
+
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -71,6 +73,15 @@ const Footer = () => {
                 <div>
                   <p className="text-sm font-medium">Sir Ganga Ram Hospital</p>
                   <p className="text-sm">{siteMetadata.address}</p>
+
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                <div>
+                  <p>Child Welfare Clinic,1288</p>
+                  <p className="text-sm">{siteMetadata.address2}</p>
+
                 </div>
               </div>
               <div className="p-4 bg-white rounded-lg mt-4 hover:bg-[#FBE8DC] transition-all duration-300 cursor-pointer">

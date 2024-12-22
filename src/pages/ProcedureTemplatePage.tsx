@@ -51,16 +51,7 @@ const ProcedureTemplatePage: React.FC = () => {
 
             {/* Main Content */}
             <div className="container mx-auto px-4 py-12 space-y-8">
-                {/* Duration Card */}
-                <Card className="bg-gradient-to-r from-blue-600 via-blue-400 to-orange-200 p-1">
-                    <CardContent className="bg-white rounded-lg p-6">
-                        <div className="flex items-center space-x-3 text-blue-900">
-                            <Clock className="w-6 h-6" />
-                            <h2 className="text-2xl font-semibold">Duration</h2>
-                        </div>
-                        <p className="mt-3 text-gray-700">{procedure.duration}</p>
-                    </CardContent>
-                </Card>
+               
 
                 {/* Preparation Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

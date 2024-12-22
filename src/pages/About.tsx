@@ -24,6 +24,34 @@ const AboutPage: React.FC = () => {
       link: "https://onlinelibrary.wiley.com/doi/abs/10.1111/liv.15398"
     },
     {
+      title: "Explant pathology in Biliary Atresia post Kasai procedure: a tale of two livers",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:ufrVoPGSRksC",
+    },
+    {
+      title: "Diagnosis and management of pediatric acute liver failure: consensus recommendations of the Indian Society of Pediatric Gastroenterology, Hepatology, and Nutrition (ISPGHAN)",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:WF5omc3nYNoC"
+    },
+    {
+      title: "WED-176 Early predictors of successful Kasai portoenterostomy for biliary atresia",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:YsMSGLbcyi4C",
+    },
+    {
+      title: "Genotype correlates with clinical course and outcome of children with tight junction protein 2 (TJP2) deficiency-related cholestasis",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:W7OEmFMy1HYC",
+    },
+    {
+      title: "Portal hypertension in doublecortin domain‐containing protein 2 (DCDC2) related neonatal sclerosing cholangitis",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:LkGwnXOMwfcC",
+    },
+    {
+      title: "Natural course and outcomes of children with ubiquitin‐specific protease 53 (USP53)‐related genetic chronic cholestasis",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:_FxGoFyzp5QC",
+    },
+    {
+      title: "Early predictors of successful kasai portoenterostomy",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:eQOLeE2rZwMC"
+    },
+    {
       title: "Association of HLA DRB1 Allele Profile with Pediatric Autoimmune Liver Disease in India",
       link: "https://www.sciencedirect.com/science/article/pii/S0973688323000014"
     },
@@ -38,7 +66,28 @@ const AboutPage: React.FC = () => {
     {
       title: "Endoscopic Cystogastrostomy in Children with Symptomatic Pancreatic Pseudocyst",
       link: "https://www.jcehepatology.com/article/S0973-6883(23)00213-X/abstract"
+    },
+    {
+      title: "Laterotrusion (Side to Side) and Protrusion/Retraction Difficulty of Tongue in Two Children with Wilson's Disease",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:u-x6o8ySG0sC"
+    },
+    {
+      title: "PP069 [Combined Organ Systems» Hematology/Oncology/Immunology/Stem cell transplant]: CLINICAL AND LABORATORY RISK PREDICTIVE FACTORS FOR MORTALITY IN HLH WITH ASSOCIATED LIVER …",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:UeHWp8X0CEIC"
+    },
+    {
+      title: "Rotational thromboelastometry guided blood component use in children with cirrhosis undergoing invasive procedures: a randomized controlled trial",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:Tyk-4Ss8FVUC"
+    },
+    {
+      title: "Association of HLA B1 allele profile with pediatric autoimmune liver disease in India",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:IjCSPb-OGe4C"
+    },
+    {
+      title: "Rotational thromboelastometry guided blood component use in children with cirrhosis undergoing invasive procedures: a randomized controlled trial",
+      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:zYLM7Y9cAGgC"
     }
+
   ];
 
   const awards: Award[] = [
@@ -46,10 +95,7 @@ const AboutPage: React.FC = () => {
       year: "2024",
       title: "Young Investigator Award - European Society of Paediatric Gastroenterology Hepatology and Nutrition, Milan, Italy"
     },
-    {
-      year: "2023",
-      title: "CP Mittal Award - Indian Society of Pediatric Gastroenterology Hepatology and Nutrition"
-    },
+
     {
       year: "2023",
       title: "Preceptorship Award - Singapore Hepatology Conference"
@@ -57,6 +103,10 @@ const AboutPage: React.FC = () => {
     {
       year: "2023",
       title: "Rising Star Award - Pediatric Hepatology awarded by Indian Society of Pediatric Gastroenterology Hepatology and Nutrition"
+    },
+    {
+      year: "2022",
+      title: "CP Mittal Award - Indian Society of Pediatric Gastroenterology Hepatology and Nutrition"
     },
     {
       year: "2022",
@@ -96,7 +146,7 @@ const AboutPage: React.FC = () => {
       {/* Hero Section with Modern Gradient */}
       <div className="relative w-full h-[500px] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/80 to-red-900/70"></div>
-        
+
         <div className="container mx-auto px-4 h-full flex items-center relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
@@ -140,11 +190,11 @@ const AboutPage: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Calendar className="text-orange-200" />
-                  <p>Mon - Sat 9:00 am - 10:00 am</p>
+                  <p>Mon - Sat 9:00 am - 4:pm </p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="text-orange-200" />
-                  <p>Room: F-86</p>
+                  <p>Room: 1192</p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="text-orange-200" />
@@ -154,7 +204,7 @@ const AboutPage: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="text-orange-200" />
-                  <p>+011-42254000</p>
+                  <p>+91-8076253821</p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Linkedin className="text-orange-200" />
@@ -183,7 +233,7 @@ const AboutPage: React.FC = () => {
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                "Neonatal Cholestasis Syndrome",
+                "Jaundice in Children",
                 "Hepatitis-Jaundice in older children",
                 "Metabolic liver disease",
                 "Acute liver failure",
@@ -213,6 +263,8 @@ const AboutPage: React.FC = () => {
               {[
                 "Endoscopy and Variceal Endotherapy",
                 "Gastrointestinal Foreign Body removal",
+                "Percutaneous Endoscopic Gastrostomy",
+                "Liver Biopsy",
                 "Colonoscopy",
                 "Anorectal Manometry",
                 "Transjugular Liver Biopsy",
