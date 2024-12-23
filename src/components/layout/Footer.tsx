@@ -7,8 +7,11 @@ const siteMetadata = {
   email: "arjunmaria@hotmail.com",
   phone: "+91-8076253821",
   address: "1192",
+  address1: "F-86, Child Liver Clinic,",
   address2: "Sector 37 Noida, opposite 2nd Market",
-  consultingHours1: "Mon - Sat 9:00 am - 4:00 pm",
+  consultingHours: "Mon - Sat 9:00 am - 4:00 pm",
+  consultingHours1: "Mon, Wed, Friday 6:00 pm - 8:00 pm",
+  consultingHours2: "Tuesday, Thursday, Saturday 6:00 pm - 8:00 pm"
 };
 
 
@@ -64,6 +67,22 @@ const Footer = () => {
                 <Clock className="w-5 h-5" />
                 <div>
                   <p className="text-sm font-medium">Consulting Hours</p>
+                  <p className="text-sm">{siteMetadata.consultingHours}</p>
+
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                <div>
+                  <p className="text-sm">{siteMetadata.address}, </p>
+                  <p className="text-sm font-medium">Sir Ganga Ram Hospital</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5" />
+                <div>
+                  <p className="text-sm font-medium">Consulting Hours</p>
                   <p className="text-sm">{siteMetadata.consultingHours1}</p>
 
                 </div>
@@ -71,11 +90,20 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
                 <div>
+                  <p className="text-sm">{siteMetadata.address1}</p>
                   <p className="text-sm font-medium">Sir Ganga Ram Hospital</p>
-                  <p className="text-sm">{siteMetadata.address}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5" />
+                <div>
+                  <p className="text-sm font-medium">Consulting Hours</p>
+                  <p className="text-sm">{siteMetadata.consultingHours2}</p>
 
                 </div>
               </div>
+
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
                 <div>

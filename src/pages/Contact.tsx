@@ -48,8 +48,8 @@ const ContactPage: React.FC = () => {
             <p className="text-gray-600">Mon - Sat: 9:00 am - 4:00 pm
               <span className='text-gray-400'> @ Room No. 1192, Sir Ganga Ram Hospital</span>
             </p>
-            <p className='text-gray-600'>Mon, Wed, Friday: 4pm - 8pm 
-              <span className='text-gray-400'> @ Sir Ganga Ram Hospital</span>              
+            <p className='text-gray-600'>Mon, Wed, Friday: 6pm - 8pm 
+              <span className='text-gray-400'> @Room No. F-86, Sir Ganga Ram Hospital</span>              
             </p>
             <p className='text-gray-600'>Tuesday, Thursday, Saturday : 6pm - 8pm 
               <span className='text-gray-400'> @ Child Welfare Clinic</span>

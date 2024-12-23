@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { motion } from 'framer-motion';
-import { Award, Clock, MapPin,Mail, BookOpen, Stethoscope, ChevronRight,GraduationCap, Heart} from 'lucide-react';
+import { Award, Clock, MapPin, Mail, BookOpen, Stethoscope, ChevronRight, GraduationCap, Heart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import AppointmentModal from '../components/utilities/AppointmentModal';
 import OnlineAppointmentModal from '../components/utilities/OnlineAppointmentModal';
@@ -140,7 +140,7 @@ const HomePage: React.FC = () => {
                                     View Full Profile
                                     <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                 </Button>
-                                <Button onClick={() => navigate("/about#publications")} variant="ghost">Read Publications</Button>
+                                <Button onClick={() => window.open('https://scholar.google.com/citations?hl=en&user=ITDM7MwAAAAJ&view_op=list_works&sortby=pubdate')} variant="ghost">Read Publications</Button>
                             </div>
                         </motion.div>
                     </div>
@@ -199,7 +199,7 @@ const HomePage: React.FC = () => {
                                         </div>
                                         <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
                                         <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                                        <Button onClick={()=>navigate(service.link)} variant="ghost" className="group">
+                                        <Button onClick={() => navigate(service.link)} variant="ghost" className="group">
                                             Learn More
                                             <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                         </Button>
@@ -215,7 +215,7 @@ const HomePage: React.FC = () => {
                             size="xl"
                             variant="default"
                             className="bg-green-600/80 text-center hover:bg-green-600 text-white"
-                            onClick={()=>navigate("/services")}
+                            onClick={() => navigate("/services")}
                         >
                             Learn about Services
                         </Button>
@@ -232,12 +232,12 @@ const HomePage: React.FC = () => {
                             {
                                 icon: <Clock />,
                                 title: "Consultation Hours",
-                                details: ["Monday - Saturday", "9:00 AM - 10:00 AM"]
+                                details: ["Monday - Saturday 9:00 AM - 4 PM @1192", "Monday,Wednesday, Saturday 6:00 PM to 8 PM @F-86", "Sir Ganga Ram Hospital, New Delhi"]
                             },
                             {
                                 icon: <MapPin />,
-                                title: "Location",
-                                details: ["Room: 1192", "Sir Ganga Ram Hospital", "New Delhi"]
+                                title: "Clinic",
+                                details: ["Tuesday, Thursday, Saturday 6:00 pm - 8:00 pm","1288, opposite Lal Market, Harijan Basti, Arun Vihar, Sector 37, Noida, Uttar Pradesh 201303"]
                             },
                             {
                                 icon: <Mail />,
@@ -268,6 +268,39 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            <motion.section
+                className="py-16 bg-white"
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+            >
+                <div className="container mx-auto px-4">
+                    <motion.div
+                        className="w-full lg:w-4/5 mx-auto flex flex-col lg:flex-row gap-4"
+                        variants={itemVariants}
+                    >
+                        <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-xl">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.709809128418!2d77.18698097632311!3d28.63845817566164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02a17db06405%3A0x6f1a6c9d6ede10d0!2sSir%20Ganga%20Ram%20Hospital!5e0!3m2!1sen!2sin!4v1732308053348!5m2!1sen!2sin"
+                                title='Sir Ganga Ram Hospital'
+                                className="w-full h-[450px]"
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                        <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-xl">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.065336323065!2d77.3434513!3d28.5678007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5b78ad44519%3A0x741d45803e049248!2sDr%20Pankaj%20Maria%20-%20Top%2010%20paediatrician%20of%20Noida%20I%20Top%2010%20best%20paediatrician%20of%20Noida!5e0!3m2!1sen!2sin!4v1734959842774!5m2!1sen!2sin"
+                                title='Dr. Arjun Maria'
+                                className="w-full h-[450px]"
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    </motion.div>
+                </div>
+            </motion.section>
 
             {/* CTA Section */}
             <section className="py-24 relative">
@@ -301,7 +334,7 @@ const HomePage: React.FC = () => {
                                 Schedule Consultation
                             </Button>
                             <Button size="lg" onClick={() => navigate("/contact")} variant="outline">
-                                 Contact Us 
+                                Contact Us
                             </Button>
                         </div>
                     </motion.div>
@@ -310,28 +343,7 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
-            {/* Map Section */}
-            <motion.section
-                className="py-16 bg-white"
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-            >
-                <div className="container mx-auto px-4">
-                    <motion.div
-                        className="w-full lg:w-4/5 mx-auto rounded-2xl overflow-hidden shadow-xl"
-                        variants={itemVariants}
-                    >
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.709809128418!2d77.18698097632311!3d28.63845817566164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02a17db06405%3A0x6f1a6c9d6ede10d0!2sSir%20Ganga%20Ram%20Hospital!5e0!3m2!1sen!2sin!4v1732308053348!5m2!1sen!2sin"
-                            title='Sir Ganga Ram Hospital'
-                            className="w-full h-[450px]"
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
-                    </motion.div>
-                </div>
-            </motion.section>
+
         </main>
     );
 };

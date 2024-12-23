@@ -32,7 +32,7 @@ const AboutPage: React.FC = () => {
       link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:WF5omc3nYNoC"
     },
     {
-      title: "WED-176 Early predictors of successful Kasai portoenterostomy for biliary atresia",
+      title: "Early predictors of successful Kasai portoenterostomy for biliary atresia",
       link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:YsMSGLbcyi4C",
     },
     {
@@ -72,7 +72,7 @@ const AboutPage: React.FC = () => {
       link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:u-x6o8ySG0sC"
     },
     {
-      title: "PP069 [Combined Organ Systems» Hematology/Oncology/Immunology/Stem cell transplant]: CLINICAL AND LABORATORY RISK PREDICTIVE FACTORS FOR MORTALITY IN HLH WITH ASSOCIATED LIVER …",
+      title: "Combined Organ Systems» Hematology/Oncology/Immunology/Stem cell transplant]: CLINICAL AND LABORATORY RISK PREDICTIVE FACTORS FOR MORTALITY IN HLH WITH ASSOCIATED LIVER …",
       link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:UeHWp8X0CEIC"
     },
     {
