@@ -232,7 +232,7 @@ const HomePage: React.FC = () => {
                             {
                                 icon: <Clock />,
                                 title: "Consultation Hours",
-                                details: ["Monday - Saturday 9:00 AM - 4 PM @1192", "Monday,Wednesday, Saturday 6:00 PM to 8 PM @F-86", "Sir Ganga Ram Hospital, New Delhi"]
+                                details: ["Monday - Saturday 9:00 AM - 4 PM @ 1192", "Monday, Wednesday, Friday 6:00 PM to 8 PM @ Child Liver Clinic, F-86", "Sir Ganga Ram Hospital, New Delhi"]
                             },
                             {
                                 icon: <MapPin />,

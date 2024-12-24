@@ -75,18 +75,6 @@ const AboutPage: React.FC = () => {
       title: "Combined Organ Systems» Hematology/Oncology/Immunology/Stem cell transplant]: CLINICAL AND LABORATORY RISK PREDICTIVE FACTORS FOR MORTALITY IN HLH WITH ASSOCIATED LIVER …",
       link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:UeHWp8X0CEIC"
     },
-    {
-      title: "Rotational thromboelastometry guided blood component use in children with cirrhosis undergoing invasive procedures: a randomized controlled trial",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:Tyk-4Ss8FVUC"
-    },
-    {
-      title: "Association of HLA B1 allele profile with pediatric autoimmune liver disease in India",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:IjCSPb-OGe4C"
-    },
-    {
-      title: "Rotational thromboelastometry guided blood component use in children with cirrhosis undergoing invasive procedures: a randomized controlled trial",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ITDM7MwAAAAJ&sortby=pubdate&citation_for_view=ITDM7MwAAAAJ:zYLM7Y9cAGgC"
-    }
 
   ];
 
