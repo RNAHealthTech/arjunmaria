@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import proceduresData from '../components/data/procedures';
-import { ArrowRight, Activity, Stethoscope} from 'lucide-react';
+import { ArrowRight, Activity, Stethoscope } from 'lucide-react';
 import AppointmentModal from '../components/utilities/AppointmentModal';
+import { Helmet } from 'react-helmet';
 
 // Custom Button Component
 const Button = ({
@@ -83,75 +84,91 @@ const ProceduresPage: React.FC = () => {
     const closeModal = () => setIsModalOpen(false);
 
     return (
-        <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 pt-[110px] pb-16 mt-8">
-            <div className="container mx-auto px-4">
-                {/* Page Header */}
-                <div className="text-center mb-12">
-                    <div className="flex justify-center items-center space-x-4 mb-4">
-                        <Stethoscope className="w-10 h-10 text-blue-900" />
-                        <h1 className="text-4xl md:text-6xl font-bold text-blue-900">
-                            Our Medical Procedures
-                        </h1>
-                        <Activity className="w-10 h-10 text-blue-900" />
+        <>
+            <Helmet>
+                <title>Medical Procedures & Tests | Specialist Doctors Near You</title>
+                <meta name="description" content="Find specialized medical procedures including child liver doctors, heart specialists, cancer screening, and more. Book consultations with expert doctors for all your health needs." />
+                {/* Primary Keywords */}
+                <meta name="keywords" content="medical procedures, doctor appointment, medical tests near me, specialist doctor consultation" />
+                {/* Social Media Tags */}
+                <meta property="og:title" content="Medical Procedures & Tests | Find the Right Doctor" />
+                <meta property="og:description" content="Expert medical care with state-of-the-art procedures. Easy booking for specialist consultations, health screenings, and medical tests." />
+                {/* Additional SEO Tags */}
+                <meta name="robots" content="index, follow" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Medical Procedures & Specialist Doctors Near You" />
+                <meta name="twitter:description" content="Find expert doctors and medical procedures. Book consultations for health screenings, specialist care, and medical tests." />
+            </Helmet>
+            <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 pt-[110px] pb-16 mt-8">
+                <div className="container mx-auto px-4">
+                    {/* Page Header */}
+                    <div className="text-center mb-12">
+                        <div className="flex justify-center items-center space-x-4 mb-4">
+                            <Stethoscope className="w-10 h-10 text-blue-900" />
+                            <h1 className="text-4xl md:text-6xl font-bold text-blue-900">
+                                Our Medical Procedures
+                            </h1>
+                            <Activity className="w-10 h-10 text-blue-900" />
+                        </div>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Comprehensive, state-of-the-art medical procedures designed to provide accurate diagnostics and exceptional patient care.
+                        </p>
                     </div>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Comprehensive, state-of-the-art medical procedures designed to provide accurate diagnostics and exceptional patient care.
-                    </p>
-                </div>
 
-                {/* Procedures Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                    {proceduresData.map((procedure) => (
-                        <Card
-                            key={procedure.slug}
-                            imageUrl={procedure.image}
-                        >
-                            <div className="space-y-4">
-                                <div className="flex justify-between items-center">
-                                    <h2 className="text-3xl font-bold text-blue-900">
-                                        {procedure.title}
-                                    </h2>
-                                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                                        <ArrowRight className="w-6 h-6 text-blue-900" />
+                    {/* Procedures Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                        {proceduresData.map((procedure) => (
+                            <Card
+                                key={procedure.slug}
+                                imageUrl={procedure.image}
+                            >
+                                <div className="space-y-4">
+                                    <div className="flex justify-between items-center">
+                                        <h2 className="text-3xl font-bold text-blue-900">
+                                            {procedure.title}
+                                        </h2>
+                                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                            <ArrowRight className="w-6 h-6 text-blue-900" />
+                                        </div>
                                     </div>
-                                </div>
-                                <p className="text-gray-600 line-clamp-2">
-                                    {procedure.description}
-                                </p>
+                                    <p className="text-gray-600 line-clamp-2">
+                                        {procedure.description}
+                                    </p>
 
-                                <Button
-                                    onClick={() => handleLearnMore(procedure.slug)}
-                                    className="w-full mt-4"
-                                >
-                                    Learn More
+                                    <Button
+                                        onClick={() => handleLearnMore(procedure.slug)}
+                                        className="w-full mt-4"
+                                    >
+                                        Learn More
+                                    </Button>
+                                </div>
+                            </Card>
+                        ))}
+                    </div>
+
+                    {/* CTA Section */}
+                    <div className="mt-16 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 p-1 rounded-2xl">
+                        <div className="bg-white rounded-2xl p-8 text-center">
+                            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+                                Have Questions About Our Procedures?
+                            </h2>
+                            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+                                Our expert medical team is ready to provide personalized guidance and answer all your queries.
+                            </p>
+                            <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                                <Button onClick={() => navigate("/contact")}>
+                                    Contact Our Team
+                                </Button>
+                                <Button variant="outline" onClick={openModal}>
+                                    Schedule Consultation
                                 </Button>
                             </div>
-                        </Card>
-                    ))}
-                </div>
-
-                {/* CTA Section */}
-                <div className="mt-16 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 p-1 rounded-2xl">
-                    <div className="bg-white rounded-2xl p-8 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-                            Have Questions About Our Procedures?
-                        </h2>
-                        <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-                            Our expert medical team is ready to provide personalized guidance and answer all your queries.
-                        </p>
-                        <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-                            <Button onClick={() => navigate("/contact")}>
-                                Contact Our Team
-                            </Button>
-                            <Button variant="outline" onClick={openModal}>
-                                Schedule Consultation
-                            </Button>
                         </div>
                     </div>
+                    <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
                 </div>
-                <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
-            </div>
-        </main>
+            </main>
+        </>
     );
 };
 

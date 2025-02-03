@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Clock, AlarmCheck, ListChecks, Activity, ShieldAlert, HeartPulse, Calendar } from 'lucide-react';
+import { AlarmCheck, ListChecks, Activity, ShieldAlert, HeartPulse, Calendar } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import proceduresData, { ProcedureData } from '../components/data/procedures';

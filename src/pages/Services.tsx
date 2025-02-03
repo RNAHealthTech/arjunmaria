@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import services from '../components/data/services';
 import AppointmentModal from '../components/utilities/AppointmentModal';
+import { Helmet } from 'react-helmet';
 
 // Custom Button Component
-const Button = ({ 
-    children, 
-    variant = 'default', 
-    className = '', 
-    onClick 
+const Button = ({
+    children,
+    variant = 'default',
+    className = '',
+    onClick
 }: {
     children: React.ReactNode;
     variant?: 'default' | 'outline';
@@ -16,7 +17,7 @@ const Button = ({
     onClick?: () => void;
 }) => {
     const baseStyles = "px-4 py-2 rounded-lg transition duration-300 ease-in-out font-semibold text-sm";
-    
+
     const variantStyles = {
         default: "bg-blue-900 text-white hover:bg-blue-800",
         outline: "border border-blue-900 text-blue-900 hover:bg-blue-100"
@@ -33,11 +34,11 @@ const Button = ({
 };
 
 // Custom Card Component
-const Card = ({ 
-    children, 
-    className = '', 
+const Card = ({
+    children,
+    className = '',
     title,
-    image 
+    image
 }: {
     children: React.ReactNode;
     className?: string;
@@ -48,9 +49,9 @@ const Card = ({
         <div className={`bg-white rounded-lg shadow-md overflow-hidden ${className}`}>
             {image && (
                 <div className="h-48 w-full">
-                    <img 
-                        src={image} 
-                        alt={title} 
+                    <img
+                        src={image}
+                        alt={title}
                         className="w-full h-full object-cover"
                     />
                 </div>
@@ -69,10 +70,10 @@ const Card = ({
 
 const ServicesPage: React.FC = () => {
     const navigate = useNavigate();
-    
+
     // Flatten services and create a single list of all service items
     const allServices = services.flatMap(category => category.items);
-    
+
     // State to manage selected service
     const [selectedService, setSelectedService] = useState(allServices[0]);
 
@@ -80,92 +81,136 @@ const ServicesPage: React.FC = () => {
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
+    const seoDescription = "Find specialized medical care at our clinic - including children's doctors, heart specialists, bone doctors, skin doctors, and women's health experts. Book appointments online with experienced healthcare providers.";
+
+    // Create keywords using both medical terms and layman terms
+    const seoKeywords = "medical services, doctors near me, children's doctor, pediatrician, heart doctor, cardiologist, bone doctor, orthopedic, skin specialist, dermatologist, women's health doctor, gynecologist, medical clinic, healthcare providers, book doctor appointment";
+
+
     return (
-        <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 mt-16">
-            <div className="max-w-7xl mx-auto">
-                <h1 className="text-4xl font-bold text-blue-900 text-center mb-12">
-                    Our Medical Services
-                </h1>
+        <>
+            <Helmet>
+                <title>Medical Services & Specialists | Book Doctor Appointments Online</title>
+                <meta name="description" content={seoDescription} />
+                <meta name="keywords" content={seoKeywords} />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Left Side Navigation */}
-                    <div className="md:col-span-1 bg-white rounded-lg shadow-lg p-6 overflow-y-auto max-h-[600px]">
-                        {services.map((category, categoryIndex) => (
-                            <div key={categoryIndex} className="mb-6">
-                                <h3 className="text-xl font-semibold text-blue-900 mb-4 border-b pb-2">
-                                    {category.category}
-                                </h3>
-                                {category.items.map((service) => (
-                                    <div
-                                        key={service.slug}
-                                        className={`cursor-pointer p-3 rounded-md mb-2 transition-colors 
-                                            ${selectedService.slug === service.slug 
-                                                ? 'bg-blue-100' 
-                                                : 'hover:bg-blue-50'}`}
-                                        onClick={() => setSelectedService(service)}
+                {/* Open Graph Tags for Social Media */}
+                <meta property="og:title" content="Find Medical Specialists & Book Appointments Online" />
+                <meta property="og:description" content={seoDescription} />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card Tags */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Medical Services & Doctor Appointments" />
+                <meta name="twitter:description" content={seoDescription} />
+
+                {/* Additional Meta Tags for Better SEO */}
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                {/* Schema.org Markup for Rich Snippets */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "http://schema.org",
+                        "@type": "MedicalClinic",
+                        "name": "Medical Services & Specialists",
+                        "description": seoDescription,
+                        "medicalSpecialty": [
+                            "Pediatrics",
+                            "Cardiology",
+                            "Orthopedics",
+                            "Dermatology",
+                            "Gynecology"
+                        ]
+                    })}
+                </script>
+            </Helmet>
+            <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 mt-16">
+                <div className="max-w-7xl mx-auto">
+                    <h1 className="text-4xl font-bold text-blue-900 text-center mb-12">
+                        Our Medical Services
+                    </h1>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Left Side Navigation */}
+                        <div className="md:col-span-1 bg-white rounded-lg shadow-lg p-6 overflow-y-auto max-h-[600px]">
+                            {services.map((category, categoryIndex) => (
+                                <div key={categoryIndex} className="mb-6">
+                                    <h3 className="text-xl font-semibold text-blue-900 mb-4 border-b pb-2">
+                                        {category.category}
+                                    </h3>
+                                    {category.items.map((service) => (
+                                        <div
+                                            key={service.slug}
+                                            className={`cursor-pointer p-3 rounded-md mb-2 transition-colors 
+                                            ${selectedService.slug === service.slug
+                                                    ? 'bg-blue-100'
+                                                    : 'hover:bg-blue-50'}`}
+                                            onClick={() => setSelectedService(service)}
+                                        >
+                                            <h4 className="font-semibold text-blue-900">{service.name}</h4>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Right Side Service Details */}
+                        <div className="md:col-span-2">
+                            <Card
+                                image={selectedService.image}
+                                title={selectedService.name}
+                                className="mb-8"
+                            >
+                                <p className="text-gray-700 mb-6">{selectedService.description}</p>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                    <Card title="Symptoms" className="bg-blue-50">
+                                        <ul className="space-y-2">
+                                            {selectedService.symptoms.map((symptom, index) => (
+                                                <li key={index} className="flex items-start gap-2">
+                                                    <span className="inline-block w-2 h-2 mt-2 rounded-full bg-blue-900" />
+                                                    <span className="text-gray-700">{symptom}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </Card>
+
+                                    <Card title="Treatments" className="bg-blue-100">
+                                        <ul className="space-y-2">
+                                            {selectedService.treatments.map((treatment, index) => (
+                                                <li key={index} className="flex items-start gap-2">
+                                                    <span className="inline-block w-2 h-2 mt-2 rounded-full bg-blue-900" />
+                                                    <span className="text-gray-700">{treatment}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </Card>
+                                </div>
+
+                                <div className="flex flex-col sm:flex-row justify-end space-y-4 sm:space-y-0 sm:space-x-4">
+                                    <Button
+                                        variant="outline"
+                                        className="w-full sm:w-auto"
+                                        onClick={() => navigate(`/services/${selectedService.slug}`)}
                                     >
-                                        <h4 className="font-semibold text-blue-900">{service.name}</h4>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
+                                        Detailed Information
+                                    </Button>
+                                    <Button
+                                        variant="default"
+                                        className="w-full sm:w-auto"
+                                        onClick={openModal}
+                                    >
+                                        Book Appointment
+                                    </Button>
+                                </div>
+                            </Card>
+                        </div>
+                        <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
                     </div>
-
-                    {/* Right Side Service Details */}
-                    <div className="md:col-span-2">
-                        <Card 
-                            image={selectedService.image}
-                            title={selectedService.name}
-                            className="mb-8"
-                        >
-                            <p className="text-gray-700 mb-6">{selectedService.description}</p>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                <Card title="Symptoms" className="bg-blue-50">
-                                    <ul className="space-y-2">
-                                        {selectedService.symptoms.map((symptom, index) => (
-                                            <li key={index} className="flex items-start gap-2">
-                                                <span className="inline-block w-2 h-2 mt-2 rounded-full bg-blue-900" />
-                                                <span className="text-gray-700">{symptom}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </Card>
-
-                                <Card title="Treatments" className="bg-blue-100">
-                                    <ul className="space-y-2">
-                                        {selectedService.treatments.map((treatment, index) => (
-                                            <li key={index} className="flex items-start gap-2">
-                                                <span className="inline-block w-2 h-2 mt-2 rounded-full bg-blue-900" />
-                                                <span className="text-gray-700">{treatment}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </Card>
-                            </div>
-
-                            <div className="flex flex-col sm:flex-row justify-end space-y-4 sm:space-y-0 sm:space-x-4">
-                                <Button 
-                                    variant="outline" 
-                                    className="w-full sm:w-auto"
-                                    onClick={() => navigate(`/services/${selectedService.slug}`)}
-                                >
-                                    Detailed Information
-                                </Button>
-                                <Button 
-                                    variant="default" 
-                                    className="w-full sm:w-auto"
-                                    onClick={openModal}
-                                >
-                                    Book Appointment
-                                </Button>
-                            </div>
-                        </Card>
-                    </div>
-                    <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
