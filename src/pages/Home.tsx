@@ -96,7 +96,7 @@ const HomePage: React.FC = () => {
                             <div className="flex flex-col md:flex-row gap-2 md:items-center">
                                 <h2 className="text-xl md:text-2xl text-white font-medium">Dr. Arjun Maria</h2>
                                 <span className="text-orange-200 md:border-l md:border-orange-200 md:pl-2">
-                                    Associate Consultant - Pediatric Gastroenterology
+                                    Consultant - Pediatric Gastroenterology and Hepatology
                                 </span>
                             </div>
                         </div>
@@ -145,7 +145,7 @@ const HomePage: React.FC = () => {
                                 </div>
 
                                 <p className="text-gray-700 leading-relaxed">
-                                    Dr. Arjun Maria brings exceptional expertise in pediatric gastroenterology, combining advanced clinical care with groundbreaking research. As an Associate Consultant at Sir Ganga Ram Hospital, he specializes in liver transplant management and complex gastrointestinal disorders.
+                                    Dr. Arjun Maria brings exceptional expertise in pediatric gastroenterology, combining advanced clinical care with groundbreaking research. As a Consultant at Amrita Hospital, Faridabad, he specializes in liver transplant management and complex gastrointestinal disorders.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-6">
@@ -256,17 +256,20 @@ const HomePage: React.FC = () => {
                                 {
                                     icon: <Clock />,
                                     title: "Consultation Hours",
-                                    details: ["Monday - Saturday 9:00 AM - 4 PM @ 1192", "Monday, Wednesday, Friday 6:00 PM to 8 PM @ Child Liver Clinic, F-86", "Sir Ganga Ram Hospital, New Delhi"]
+                                    details: ["Monday - Saturday 10:00 AM - 5:00 PM at Pediatric Gastroenterology OPD 6th Floor"],
+                                    institute: "Amrita Hospital and Institute of Medical Sciences, Faridabad"
                                 },
                                 {
                                     icon: <MapPin />,
                                     title: "Clinic",
-                                    details: ["Tuesday, Thursday, Saturday 6:00 pm - 8:00 pm", "1288, opposite Lal Market, Harijan Basti, Arun Vihar, Sector 37, Noida, Uttar Pradesh 201303"]
+                                    details: ["Monday - Saturday 6:00 pm - 8:00 pm (with prior appointment*)"],
+                                    institute: "1288, opposite Lal Market, Harijan Basti, Arun Vihar, Sector 37, Noida, Uttar Pradesh 201303"
                                 },
                                 {
                                     icon: <Mail />,
                                     title: "Contact",
-                                    details: ["+91-8076253821", "arjunmaria@hotmail.com"]
+                                    details: ["+91-8076253821", "arjunmaria@hotmail.com"],
+                                    institute: ""
                                 }
                             ].map((item, index) => (
                                 <motion.div
@@ -283,8 +286,11 @@ const HomePage: React.FC = () => {
                                             </div>
                                             <h3 className="text-xl font-bold text-white">{item.title}</h3>
                                             {item.details.map((detail, i) => (
-                                                <p key={i} className="text-blue-200">{detail}</p>
+                                                <p key={i} className="text-white font-semibold text-md md:text-lg">{detail}</p>
                                             ))}
+                                            <div className='p-3 text-blue-200 text-lg'>
+                                                {item.institute}
+                                            </div>
                                         </CardContent>
                                     </Card>
                                 </motion.div>
@@ -305,8 +311,9 @@ const HomePage: React.FC = () => {
                             variants={itemVariants}
                         >
                             <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-xl">
+                                <h1 className='text-blue-700 text-xl mb-4'> Amrita Hospital </h1>
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.709809128418!2d77.18698097632311!3d28.63845817566164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02a17db06405%3A0x6f1a6c9d6ede10d0!2sSir%20Ganga%20Ram%20Hospital!5e0!3m2!1sen!2sin!4v1732308053348!5m2!1sen!2sin"
+                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3508.798847708012!2d77.35150437549319!3d28.42532587577854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI1JzMxLjIiTiA3N8KwMjEnMTQuNyJF!5e0!3m2!1sen!2sin!4v1746181009587!5m2!1sen!2sin"
                                     title='Sir Ganga Ram Hospital'
                                     className="w-full h-[450px]"
                                     loading="lazy"
@@ -314,6 +321,8 @@ const HomePage: React.FC = () => {
                                 ></iframe>
                             </div>
                             <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-xl">
+                                <h1 className='text-blue-700 text-xl mb-4'> Child Welfare Clinic </h1>
+
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.065336323065!2d77.3434513!3d28.5678007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5b78ad44519%3A0x741d45803e049248!2sDr%20Pankaj%20Maria%20-%20Top%2010%20paediatrician%20of%20Noida%20I%20Top%2010%20best%20paediatrician%20of%20Noida!5e0!3m2!1sen!2sin!4v1734959842774!5m2!1sen!2sin"
                                     title='Dr. Arjun Maria'

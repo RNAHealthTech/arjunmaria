@@ -7,6 +7,7 @@ interface Publication {
   link: string;
 }
 
+// eslint-disable-next-line
 interface Award {
   year: string;
   title: string;
@@ -208,11 +209,11 @@ const AboutPage: React.FC = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Calendar className="text-orange-200" />
-                    <p>Mon - Sat 9:00 am - 4:pm </p>
+                    <p>Mon - Sat 10:00 am - 5:pm </p>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="text-orange-200" />
-                    <p>Room: 1192</p>
+                    <p>Pediatric Gastroenterology OPD 6th Floor, Amrita Hospital</p>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="text-orange-200" />

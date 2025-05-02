@@ -72,13 +72,10 @@ const ContactPage: React.FC = () => {
             <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
               <Clock className="w-6 h-6 text-blue-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Consultation Hours</h3>
-              <p className="text-gray-600">Mon - Sat: 9:00 am - 4:00 pm
-                <span className='text-gray-400'> @ Room No. 1192, Sir Ganga Ram Hospital</span>
+              <p className="text-gray-600">Mon - Sat: 10:00 am - 5:00 pm
+                <span className='text-gray-400'> @ Pediatric Gastroenterology OPD 6th Floor, Amrita Hospital and Institute of Medical Sciences, Faridabad</span>
               </p>
-              <p className='text-gray-600'>Mon, Wed, Friday: 6pm - 8pm
-                <span className='text-gray-400'> @Room No. F-86, Sir Ganga Ram Hospital</span>
-              </p>
-              <p className='text-gray-600'>Tuesday, Thursday, Saturday : 6pm - 8pm
+              <p className='text-gray-600'>Mon - Sat : 6:00 pm - 8:00 pm
                 <span className='text-gray-400'> @ Child Welfare Clinic</span>
               </p>
             </div>
