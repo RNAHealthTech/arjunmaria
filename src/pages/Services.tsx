@@ -81,27 +81,27 @@ const ServicesPage: React.FC = () => {
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
-    const seoDescription = "Find specialized medical care at our clinic - including children's doctors, heart specialists, bone doctors, skin doctors, and women's health experts. Book appointments online with experienced healthcare providers.";
+    const seoDescription = "Specialized pediatric gastroenterology and hepatology services by Dr. Arjun Maria in Delhi NCR. Clinical care for pediatric jaundice, hepatitis, metabolic liver diseases, acute and chronic liver conditions, and gastrointestinal disorders.";
 
     // Create keywords using both medical terms and layman terms
-    const seoKeywords = "medical services, doctors near me, children's doctor, pediatrician, heart doctor, cardiologist, bone doctor, orthopedic, skin specialist, dermatologist, women's health doctor, gynecologist, medical clinic, healthcare providers, book doctor appointment";
+    const seoKeywords = "pediatric liver care, child gastroenterologist delhi, neonatal cholestasis, jaundice in babies, pediatric hepatitis, metabolic liver disease, acute liver failure children, pediatric liver transplant, child constipation, pediatric abdominal pain, pediatric endoscopy";
 
 
     return (
         <>
             <Helmet>
-                <title>Medical Services & Specialists | Book Doctor Appointments Online</title>
+                <title>Pediatric Liver & Gastrointestinal Services | Dr. Arjun Maria</title>
                 <meta name="description" content={seoDescription} />
                 <meta name="keywords" content={seoKeywords} />
 
                 {/* Open Graph Tags for Social Media */}
-                <meta property="og:title" content="Find Medical Specialists & Book Appointments Online" />
+                <meta property="og:title" content="Pediatric Liver & Gastrointestinal Services - Dr. Arjun Maria" />
                 <meta property="og:description" content={seoDescription} />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Medical Services & Doctor Appointments" />
+                <meta name="twitter:title" content="Pediatric Liver & GI Care Services - Dr. Arjun Maria" />
                 <meta name="twitter:description" content={seoDescription} />
 
                 {/* Additional Meta Tags for Better SEO */}
@@ -113,14 +113,12 @@ const ServicesPage: React.FC = () => {
                     {JSON.stringify({
                         "@context": "http://schema.org",
                         "@type": "MedicalClinic",
-                        "name": "Medical Services & Specialists",
+                        "name": "Pediatric Gastroenterology & Hepatology Services",
                         "description": seoDescription,
                         "medicalSpecialty": [
-                            "Pediatrics",
-                            "Cardiology",
-                            "Orthopedics",
-                            "Dermatology",
-                            "Gynecology"
+                            "Pediatric Gastroenterology",
+                            "Pediatric Hepatology",
+                            "Pediatrics"
                         ]
                     })}
                 </script>
@@ -201,7 +199,7 @@ const ServicesPage: React.FC = () => {
                                         className="w-full sm:w-auto"
                                         onClick={openModal}
                                     >
-                                        Book Appointment
+                                        Request Consultation
                                     </Button>
                                 </div>
                             </Card>

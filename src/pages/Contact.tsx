@@ -10,18 +10,18 @@ const ContactPage: React.FC = () => {
     <>
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>Book Appointment with Child Liver & Digestive System Specialist in Delhi | Dr. Maria</title>
-        <meta name="description" content="Schedule a consultation with Delhi's experienced children's liver and digestive system specialist. Expert care for liver problems, stomach issues, and digestive concerns in children. Easy online booking available." />
+        <title>Schedule Consultation - Child Liver & Digestive System Specialist | Dr. Maria</title>
+        <meta name="description" content="Schedule a consultation with pediatric liver and digestive system specialist Dr. Arjun Maria. Clinical care for liver problems, stomach issues, and digestive concerns in children." />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Book Appointment - Children's Liver & Digestive System Specialist" />
-        <meta property="og:description" content="Get specialized treatment for your child's liver and digestive problems. Expert care for jaundice, hepatitis, stomach issues, and liver transplant support in Delhi." />
+        <meta property="og:title" content="Schedule Consultation - Children's Liver & Digestive System Specialist" />
+        <meta property="og:description" content="Consultation and clinical care for pediatric liver and digestive problems, jaundice, hepatitis, stomach issues, and liver transplant evaluation in Delhi NCR." />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Book Children's Liver Doctor Appointment | Dr. Maria - Delhi" />
-        <meta property="twitter:description" content="Expert children's liver and stomach specialist in Delhi. Treatment for jaundice, hepatitis, digestive problems, and liver conditions. Book your appointment today." />
+        <meta property="twitter:title" content="Consultation - Pediatric Liver & Digestive Doctor | Dr. Maria" />
+        <meta property="twitter:description" content="Pediatric liver and gastroenterology consultation in Delhi NCR for jaundice, hepatitis, digestive problems, and liver conditions." />
 
         {/* Keywords */}
         <meta name="keywords" content="children liver doctor delhi, kids digestive system specialist, pediatric liver transplant, child stomach doctor, jaundice in children treatment, kids hepatitis doctor, children liver specialist ganga ram hospital, book child liver doctor appointment" />
@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
                   Schedule Your Consultation
                 </h1>
                 <p className="text-xl text-blue-100">
-                  Expert pediatric gastroenterology and hepatology care for your child
+                  Comprehensive pediatric gastroenterology and hepatology care for your child
                 </p>
               </div>
             </div>
@@ -84,7 +84,7 @@ const ContactPage: React.FC = () => {
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Form Section */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Book an Appointment</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Request Consultation</h2>
 
               {state.succeeded ? (
                 <div className="text-center py-12">
@@ -178,7 +178,7 @@ const ContactPage: React.FC = () => {
                     disabled={state.submitting}
                     className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300"
                   >
-                    {state.submitting ? "Submitting..." : "Schedule Appointment"}
+                    {state.submitting ? "Submitting..." : "Submit Consultation Request"}
                   </button>
                 </form>
               )}
@@ -208,19 +208,19 @@ const ContactPage: React.FC = () => {
               </div>
 
               <div className="bg-orange-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose Dr. Maria?</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Clinical Focus & Care Principles</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
                     <Calendar className="w-5 h-5 text-orange-600 mt-1" />
-                    <span className="text-gray-700">14+ years of specialized experience in pediatric hepatology</span>
+                    <span className="text-gray-700">Super-specialized DM training in Pediatric Hepatology from ILBS</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Calendar className="w-5 h-5 text-orange-600 mt-1" />
-                    <span className="text-gray-700">Expertise in liver transplant management</span>
+                    <span className="text-gray-700">Dedicated care in pediatric liver transplant management</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Calendar className="w-5 h-5 text-orange-600 mt-1" />
-                    <span className="text-gray-700">Comprehensive care for complex liver conditions</span>
+                    <span className="text-gray-700">Evidence-based clinical care for complex liver and digestive conditions</span>
                   </li>
                 </ul>
               </div>

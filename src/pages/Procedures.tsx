@@ -86,18 +86,18 @@ const ProceduresPage: React.FC = () => {
     return (
         <>
             <Helmet>
-                <title>Medical Procedures & Tests | Specialist Doctors Near You</title>
-                <meta name="description" content="Find specialized medical procedures including child liver doctors, heart specialists, cancer screening, and more. Book consultations with expert doctors for all your health needs." />
+                <title>Pediatric Endoscopy & Liver Diagnostic Procedures | Dr. Arjun Maria</title>
+                <meta name="description" content="Pediatric gastrointestinal and liver diagnostic procedures performed by Dr. Arjun Maria, including endoscopy, colonoscopy, PEG tube placement, liver biopsy, and Fibroscan." />
                 {/* Primary Keywords */}
-                <meta name="keywords" content="medical procedures, doctor appointment, medical tests near me, specialist doctor consultation" />
+                <meta name="keywords" content="pediatric endoscopy, child colonoscopy, pediatric liver biopsy, fibroscan children, pediatric gastroenterology procedures delhi" />
                 {/* Social Media Tags */}
-                <meta property="og:title" content="Medical Procedures & Tests | Find the Right Doctor" />
-                <meta property="og:description" content="Expert medical care with state-of-the-art procedures. Easy booking for specialist consultations, health screenings, and medical tests." />
+                <meta property="og:title" content="Pediatric Gastrointestinal & Liver Procedures - Dr. Arjun Maria" />
+                <meta property="og:description" content="Diagnostic and therapeutic pediatric gastroenterology and liver procedures in Delhi NCR, performed with specialized child-focused clinical care." />
                 {/* Additional SEO Tags */}
                 <meta name="robots" content="index, follow" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Medical Procedures & Specialist Doctors Near You" />
-                <meta name="twitter:description" content="Find expert doctors and medical procedures. Book consultations for health screenings, specialist care, and medical tests." />
+                <meta name="twitter:title" content="Pediatric Procedures & Liver Diagnostics - Dr. Arjun Maria" />
+                <meta name="twitter:description" content="Diagnostic and therapeutic pediatric gastroenterology procedures and liver care consultations." />
             </Helmet>
             <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 pt-[110px] pb-16 mt-8">
                 <div className="container mx-auto px-4">
@@ -111,7 +111,7 @@ const ProceduresPage: React.FC = () => {
                             <Activity className="w-10 h-10 text-blue-900" />
                         </div>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Comprehensive, state-of-the-art medical procedures designed to provide accurate diagnostics and exceptional patient care.
+                            Diagnostic and therapeutic procedures performed to evaluate and manage pediatric gastrointestinal and liver conditions.
                         </p>
                     </div>
 
@@ -153,7 +153,7 @@ const ProceduresPage: React.FC = () => {
                                 Have Questions About Our Procedures?
                             </h2>
                             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-                                Our expert medical team is ready to provide personalized guidance and answer all your queries.
+                                Our clinical team is available to provide guidance and answer your questions regarding procedures.
                             </p>
                             <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
                                 <Button onClick={() => navigate("/contact")}>

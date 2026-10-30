@@ -31,7 +31,7 @@ const Footer = () => {
             <h3 className="text-2xl font-semibold mb-2">Dr. Arjun Maria</h3>
             <h4 className="text-lg">Pediatric Gastroenterology & Hepatology</h4>
             <p className="text-sm text-gray-200 mt-4 max-w-xs">
-              DM specialization in Pediatric Hepatology with 14 years of experience in managing pediatric liver, pancreas, and gastrointestinal disorders.
+              DM in Pediatric Hepatology from ILBS with specialized training in pediatric liver, pancreatic, and gastrointestinal disorders.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="p-4 bg-white rounded-lg mt-4 hover:bg-[#FBE8DC] transition-all duration-300 cursor-pointer">
-                <p className="text-sm text-blue-900 font-semibold mb-2">Book an Appointment</p>
+                <p className="text-sm text-blue-900 font-semibold mb-2">Schedule Consultation</p>
                 <div className="flex items-center gap-2">
                   <Phone className="w-5 h-5 text-blue-900" />
                   <p className="text-lg font-bold text-blue-900">{siteMetadata.phone}</p>
@@ -122,7 +122,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <BookOpen className="w-5 h-5" />
-                <p className="text-sm">14+ Years Experience</p>
+                <p className="text-sm">DM Pediatric Hepatology (ILBS)</p>
               </div>
               <a
                 href={siteMetadata.linkedin}
@@ -143,7 +143,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Dr. Arjun Maria. All rights reserved.
           </p>
           <p className="text-sm">
-            DM Pediatric Hepatology | Gastroenterology Expert
+            DM Pediatric Hepatology | Pediatric Gastroenterology
           </p>
           <div className="flex gap-4 text-sm">
             <p className="text-sm">

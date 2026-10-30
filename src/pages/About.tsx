@@ -134,28 +134,28 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Dr. Arjun Maria - Expert Child Liver Specialist & Stomach Doctor in Delhi</title>
-        <meta name="description" content="Meet Dr. Arjun Maria, a highly awarded child liver and digestive system specialist with 14+ years experience. Trained at top Delhi hospitals, expert in children's liver transplant, jaundice treatment, and stomach problems." />
+        <title>About Dr. Arjun Maria - Pediatric Liver & Gastroenterology Specialist in Delhi</title>
+        <meta name="description" content="Learn about Dr. Arjun Maria, Pediatric Gastroenterologist and Hepatologist with DM specialisation from ILBS. Providing medical care for children's liver disorders, jaundice, digestive issues, and liver transplant management." />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="profile" />
-        <meta property="og:title" content="Dr. Arjun Maria - Child Liver & Digestive System Expert | Delhi's Top Specialist" />
-        <meta property="og:description" content="Award-winning children's liver specialist treating jaundice, stomach problems, and liver diseases. DM in Child Liver Diseases from ILBS. Available at Sir Ganga Ram Hospital, Delhi and Noida." />
+        <meta property="og:title" content="About Dr. Arjun Maria - Pediatric Liver & Digestive System Specialist" />
+        <meta property="og:description" content="Pediatric Gastroenterologist and Hepatologist with DM from ILBS. Dedicated care for pediatric liver diseases, jaundice, gastrointestinal disorders, and liver transplant management." />
         <meta property="profile:first_name" content="Arjun" />
         <meta property="profile:last_name" content="Maria" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="About Dr. Arjun Maria - Delhi's Leading Child Liver & Stomach Specialist" />
-        <meta name="twitter:description" content="Specialist in children's liver transplant, jaundice, stomach problems, and digestive issues. European award winner with expertise in advanced liver treatments for kids." />
+        <meta name="twitter:title" content="About Dr. Arjun Maria - Pediatric Liver & Gastroenterology Specialist" />
+        <meta name="twitter:description" content="Specialist in pediatric liver care, jaundice, digestive conditions, and liver transplant management in Delhi NCR." />
 
         {/* Additional SEO Keywords */}
-        <meta name="keywords" content="dr arjun maria delhi, child jaundice specialist, pediatric liver transplant expert, children stomach doctor delhi, kids liver problems, child digestive system doctor, sir ganga ram hospital liver specialist, best child liver doctor delhi, child stomach specialist noida, liver transplant for children delhi" />
+        <meta name="keywords" content="dr arjun maria delhi, child jaundice specialist, pediatric liver transplant care, children stomach doctor delhi, kids liver problems, child digestive system doctor, sir ganga ram hospital liver specialist, pediatric liver doctor delhi, child stomach specialist noida, liver transplant for children delhi" />
 
         {/* Professional Information */}
         <meta name="specialty" content="Pediatric Gastroenterology, Child Liver Diseases, Liver Transplant" />
         <meta name="qualification" content="DM Pediatric Hepatology, DNB Pediatrics" />
-        <meta name="hospital" content="Sir Ganga Ram Hospital, Delhi" />
+        <meta name="hospital" content="Amrita Hospital, Faridabad" />
 
         {/* Location */}
         <meta name="geo.region" content="IN-DL" />
@@ -196,7 +196,7 @@ const AboutPage: React.FC = () => {
             <div className="bg-white rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-blue-900 mb-6">Biography</h2>
               <p className="text-gray-700 leading-relaxed">
-                Dr. Arjun Maria is a Pediatric Gastroenterologist with DM specialisation in Pediatric Hepatology. He has received extensive training in the management of pediatric liver, pancreas, gastrointestinal disorders and also has expertise in managing liver transplant patients. With 14 years of experience in the medical field, all his medical training has been completed from prestigious institutions in Delhi.
+                Dr. Arjun Maria is a Pediatric Gastroenterologist with DM specialisation in Pediatric Hepatology from the Institute of Liver and Biliary Sciences (ILBS), New Delhi. He has received specialized clinical training in managing pediatric liver, pancreas, and gastrointestinal disorders, as well as pre- and post-operative care for pediatric liver transplant patients. His medical education and training span premier medical institutions in Delhi.
               </p>
             </div>
           </div>
@@ -315,6 +315,7 @@ const AboutPage: React.FC = () => {
                 </div>
               ))}
             </div>
+            <p className="mt-4 text-xs text-gray-600">Medical Council Registration: Available upon clinic verification.</p>
           </div>
 
           {/* Awards Section */}

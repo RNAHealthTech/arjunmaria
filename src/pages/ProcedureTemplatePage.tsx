@@ -144,12 +144,12 @@ const ProcedureTemplatePage: React.FC = () => {
                     <div className="bg-white rounded-2xl p-8 text-center">
                         <h2 className="text-3xl font-bold text-blue-900 mb-4">Ready to Schedule Your Procedure?</h2>
                         <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-                            Our team is here to help you through every step of the process. Schedule a consultation with Dr. Arjun Maria to discuss your specific needs and concerns.
+                            Our clinical team provides guidance through every step of the process. Schedule a consultation with Dr. Arjun Maria to discuss diagnostic requirements and care options.
                         </p>
                         <div className="flex flex-col md:flex-row justify-center md:space-x-4 space-y-4 md:space-y-0">
                             <Button onClick={openModal} className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 md:py-6 rounded-full flex items-center justify-center space-x-2">
                                 <Calendar className="w-5 h-5" />
-                                <span>Book Appointment</span>
+                                <span>Request Consultation</span>
                             </Button>
                             <Button variant="outline" onClick={()=>navigate('/contact')} className="border-blue-900 text-blue-900 hover:bg-blue-50 px-8 py-4 md:py-2 rounded-full">
                                 Contact Us

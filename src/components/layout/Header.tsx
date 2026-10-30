@@ -147,7 +147,7 @@ const Header = () => {
                             <NavLink to="/contact">Contact</NavLink>
                             <div className="flex items-center space-x-2 border-l pl-8 ml-4 border-blue-200">
                                 <Phone className="text-blue-900" size={20} />
-                                <span className="text-blue-900 font-medium cursor-pointer" onClick={() => window.location.href = 'tel:+01142254000'}>
+                                <span className="text-blue-900 font-medium cursor-pointer" onClick={() => window.location.href = 'tel:+918076253821'}>
                                     +91-8076253821
                                 </span>
                             </div>
@@ -157,7 +157,7 @@ const Header = () => {
                             <Phone
                                 className="text-blue-900 cursor-pointer"
                                 size={24}
-                                onClick={() => window.location.href = 'tel:+01142254000'}
+                                onClick={() => window.location.href = 'tel:+918076253821'}
                             />
                             <button
                                 className="text-blue-900 focus:outline-none"

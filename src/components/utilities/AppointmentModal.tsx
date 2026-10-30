@@ -88,9 +88,9 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
             exit={{ y: -50, opacity: 0 }}
             className="bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto shadow-lg"
           >
-            <h2 className="text-2xl font-bold mb-4 text-center font-fraunces-slab text-blue-800">Book Appointment</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center font-fraunces-slab text-blue-800">Request Consultation</h2>
             {state.succeeded ? (
-              <p className="text-blue-700 text-center font-work-sans">Your appointment has been booked successfully!</p>
+              <p className="text-blue-700 text-center font-work-sans">Your consultation request has been submitted successfully!</p>
             ) : (
               <form onSubmit={handleFinalSubmit} className="space-y-4 font-work-sans">
                 <div>
@@ -136,7 +136,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
                     Cancel
                   </button>
                   <button type="submit" className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-blue-900 bg-white  transition-colors duration-300">
-                    Book Appointment
+                    Submit Request
                   </button>
                 </div>
               </form>

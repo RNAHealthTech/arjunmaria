@@ -47,20 +47,20 @@ const HomePage: React.FC = () => {
             <Helmet>
                 {/* Primary Meta Tags */}
                 <title>Dr. Arjun Maria - Child Liver & Digestive System Specialist in Delhi NCR</title>
-                <meta name="description" content="Expert child liver doctor in Delhi & Noida. Dr. Arjun Maria specializes in children's digestive problems, liver transplants, and stomach issues. Book an appointment at Sir Ganga Ram Hospital or Noida clinic." />
+                <meta name="description" content="Pediatric gastroenterology and hepatology care in Delhi & Noida. Dr. Arjun Maria provides clinical evaluation for children's liver conditions, digestive problems, and liver transplant care. Consultations available in Delhi, Noida, and Faridabad." />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Best Child Liver Specialist in Delhi NCR - Dr. Arjun Maria" />
-                <meta property="og:description" content="Leading children's digestive system specialist with 14+ years experience. Expert care for liver problems, stomach issues, and digestive disorders in kids. Consultation available in Delhi and Noida." />
+                <meta property="og:title" content="Pediatric Liver & Digestive Care in Delhi NCR - Dr. Arjun Maria" />
+                <meta property="og:description" content="Pediatric gastroenterology and hepatology care for children's liver conditions, digestive issues, and gastrointestinal disorders. Consultations available in Delhi, Noida, and Faridabad." />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Top Child Liver & Digestive System Doctor - Dr. Arjun Maria" />
-                <meta name="twitter:description" content="Trusted child liver specialist in Delhi & Noida. Expertise in kids' stomach problems, liver diseases, and digestive issues. Book appointment at Sir Ganga Ram Hospital or Noida clinic." />
+                <meta name="twitter:title" content="Pediatric Liver & Digestive System Doctor - Dr. Arjun Maria" />
+                <meta name="twitter:description" content="Pediatric liver and digestive care in Delhi & Noida. Clinical care for pediatric liver diseases and gastrointestinal disorders. Consultation available at Amrita Hospital and Noida clinic." />
 
                 {/* Additional SEO Keywords */}
-                <meta name="keywords" content="child liver doctor delhi, pediatric liver specialist noida, kids stomach doctor, children digestive system specialist, liver transplant doctor for children, Sir Ganga Ram Hospital child specialist, best child liver doctor delhi ncr, stomach problems in children, pediatric liver transplant delhi" />
+                <meta name="keywords" content="child liver doctor delhi, pediatric liver specialist noida, kids stomach doctor, children digestive system specialist, liver transplant doctor for children, pediatric liver care delhi ncr, stomach problems in children, pediatric liver transplant delhi" />
 
                 {/* Location and Contact */}
                 <meta name="geo.region" content="IN-DL" />
@@ -86,10 +86,10 @@ const HomePage: React.FC = () => {
                     </div>
                     <div className="relative z-10 h-full flex flex-col justify-center items-center lg:items-start max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-col gap-3">
-                            <span className="hidden md:block text-orange-200 text-lg md:text-xl uppercase tracking-wider">Leading Pediatric Gastroenterology Care</span>
+                            <span className="hidden md:block text-orange-200 text-lg md:text-xl uppercase tracking-wider">Pediatric Gastroenterology & Hepatology Care</span>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 max-w-3xl leading-tight">
                                 Your Child's Health Journey
-                                <span className="block">Begins With Expert Care</span>
+                                <span className="block">Supported by Dedicated Care</span>
                             </h1>
                         </div>
                         <div className="flex flex-col gap-6 mt-4">
@@ -102,7 +102,7 @@ const HomePage: React.FC = () => {
                         </div>
                         <div className="flex flex-col md:flex-row gap-4 mt-8">
                             <Button onClick={openModal} size="xl" variant="default" className="bg-white hover:bg-white/20 text-blue-900 backdrop-blur-sm">
-                                Book Priority Consultation
+                                Book Consultation
                             </Button>
                             <Button size="xl" onClick={openModal2} variant="default" className="bg-blue-600/80 hover:bg-blue-600 text-white">
                                 Virtual Consultation
@@ -139,23 +139,23 @@ const HomePage: React.FC = () => {
                             >
                                 <div>
                                     <h2 className="text-3xl font-bold text-blue-900 mb-2">
-                                        Excellence in Pediatric Care
+                                        Pediatric Gastroenterology & Hepatology
                                     </h2>
                                     <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-600"></div>
                                 </div>
 
                                 <p className="text-gray-700 leading-relaxed">
-                                    Dr. Arjun Maria brings exceptional expertise in pediatric gastroenterology, combining advanced clinical care with groundbreaking research. As a Consultant at Amrita Hospital, Faridabad, he specializes in liver transplant management and complex gastrointestinal disorders.
+                                    Dr. Arjun Maria is a Pediatric Gastroenterologist and Hepatologist with advanced training in pediatric liver, pancreatic, and gastrointestinal disorders. As a Consultant at Amrita Hospital, Faridabad, he provides specialized care in liver transplant management and complex digestive conditions.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-6">
                                     <div className="flex items-center gap-3">
                                         <Award className="h-5 w-5 text-blue-500" />
-                                        <span className="text-gray-700">Multiple International Awards</span>
+                                        <span className="text-gray-700">Academic & Research Honors</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <GraduationCap className="h-5 w-5 text-blue-500" />
-                                        <span className="text-gray-700">14+ Years Experience</span>
+                                        <span className="text-gray-700">DM Pediatric Hepatology</span>
                                     </div>
                                 </div>
 
@@ -188,14 +188,14 @@ const HomePage: React.FC = () => {
                             {[
                                 {
                                     title: "Liver Care & Transplant",
-                                    description: "Expert management of pediatric liver conditions and comprehensive transplant care services",
+                                    description: "Comprehensive management of pediatric liver conditions and transplant care services",
                                     icon: <Stethoscope className="w-8 h-8" />,
                                     color: "from-green-400 to-green-500",
                                     link: '/services'
                                 },
                                 {
                                     title: "Advanced Procedures",
-                                    description: "State-of-the-art diagnostic and therapeutic procedures with cutting-edge technology",
+                                    description: "Diagnostic and therapeutic procedures for pediatric gastrointestinal and liver evaluation",
                                     icon: <Heart className="w-8 h-8" />,
                                     color: "from-green-500 to-green-600",
                                     link: '/procedures'
@@ -314,7 +314,7 @@ const HomePage: React.FC = () => {
                                 <h1 className='text-blue-700 text-xl mb-4'> Amrita Hospital </h1>
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3508.798847708012!2d77.35150437549319!3d28.42532587577854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI1JzMxLjIiTiA3N8KwMjEnMTQuNyJF!5e0!3m2!1sen!2sin!4v1746181009587!5m2!1sen!2sin"
-                                    title='Sir Ganga Ram Hospital'
+                                    title='Amrita Hospital'
                                     className="w-full h-[450px]"
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
